@@ -1,7 +1,7 @@
 #BlueJ class context
-comment0.target=OldWindow
+comment0.target=Menu
 comment1.params=
-comment1.target=OldWindow()
+comment1.target=Menu()
 comment1.text=\n\ Create\ the\ frame.\n
 comment2.params=arg0
 comment2.target=void\ actionPerformed(java.awt.event.ActionEvent)

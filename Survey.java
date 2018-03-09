@@ -20,7 +20,7 @@ public class Survey
                     try 
                     {
                         //Create object of OldWindow
-                        OldWindow frame = new OldWindow();
+                        Menu frame = new Menu();
                         //set frame visible true
                         frame.setVisible(true); 
                      

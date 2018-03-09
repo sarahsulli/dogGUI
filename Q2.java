@@ -12,7 +12,7 @@ import javax.swing.border.EmptyBorder;
 import java.awt.FlowLayout;
 
 //create class and extend with JFrame
-public class OldWindow extends JFrame 
+public class Q2 extends JFrame 
 {
     //declare variable
     private JPanel contentPane;
@@ -21,11 +21,11 @@ public class OldWindow extends JFrame
     /**
      * Create the frame.
      */
-    public OldWindow()//constructor 
+    public Q2()//constructor 
     {
 
         //set frame title
-        setTitle("Menu");
+        setTitle("Question 1");
         //set default close operation
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         //set bounds of the frame
@@ -44,9 +44,9 @@ public class OldWindow extends JFrame
         
         
         //set Label in the frame
-        JLabel intro = new JLabel("This application helps determine what breed of dog you should get.");
+        JLabel intro = new JLabel("Question two");
         //set foreground color to the label
-        intro.setForeground(Color.BLUE);
+        intro.setForeground(Color.BLACK);
         //set font of that label
         intro.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18));
         //set bound of the label
@@ -63,7 +63,7 @@ public class OldWindow extends JFrame
                 public void actionPerformed(ActionEvent arg0)
                 {
                     //call the object of NewWindow and set visible true
-                    NewWindow frame = new NewWindow();
+                    Q2 frame = new Q2();  /**will become Q3*/
                     frame.setVisible(true);
                     //set default close operation
                     dispose();
