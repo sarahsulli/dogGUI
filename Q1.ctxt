@@ -3,6 +3,6 @@ comment0.target=Q1
 comment1.params=
 comment1.target=Q1()
 comment1.text=\n\ Create\ the\ frame.\n
-comment2.params=arg0
+comment2.params=click
 comment2.target=void\ actionPerformed(java.awt.event.ActionEvent)
 numComments=3
