@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Scores {
    private int golden = 1;
    private int lab = 0;
-   private ArrayList<Integer> scoreList;
+   public static ArrayList<Integer> scoreList;
 
    public Scores() {
        scoreList = new ArrayList<Integer>();
@@ -20,4 +20,14 @@ public class Scores {
    public ArrayList<Integer> getList() {
        return scoreList;
     }
+   //methods to add point to each dog "add point Dog # 'x'"
+   
+   public ArrayList<Integer> addPointD0(){
+       scoreList.set(0, (scoreList.get(0) +1));
+       return scoreList;
+   }
+   public ArrayList<Integer> addPointD1(){
+       scoreList.set(1, (scoreList.get(1) +1));
+       return scoreList;
+   }
 }

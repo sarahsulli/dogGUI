@@ -6,7 +6,7 @@ import java.awt.Dimension;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Survey
+public class TakeQuiz
 {
     public static void main(String[] args)
     {

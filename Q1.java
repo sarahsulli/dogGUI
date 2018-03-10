@@ -15,6 +15,7 @@ import java.awt.GridLayout;
 import javax.swing.ButtonGroup;
 import javax.swing.JRadioButton;
 import java.awt.event.*;
+import java.util.ArrayList;
 
 //create class and extend with JFrame
 public class Q1 extends JFrame 
@@ -24,7 +25,7 @@ public class Q1 extends JFrame
 
     //setting up radio buttons
 
-    private  String Q1A= "";
+
 
     /**
      * Create the frame.
@@ -45,7 +46,7 @@ public class Q1 extends JFrame
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         //set ContentPane
         setContentPane(contentPane);
-        //contentPane.setLayout(new FlowLayout());
+        /**contentPane.setLayout(new FlowLayout());*/
         contentPane.setSize(new Dimension(600,200));
         contentPane.setBounds(80, 95, 78, 25);
 
@@ -75,29 +76,38 @@ public class Q1 extends JFrame
         group.add(btn2);        
         contentPane.add(btn1);
         contentPane.add(btn2);
+        
+
 
         //create object of JButton and set label on it
         JButton btnNewFrame = new JButton("Next");
+        JButton btnBackFrame = new JButton("Back");
         //add actionListener
         btnNewFrame.addActionListener(new ActionListener()
             {
+                private Scores Scores;
                 public void actionPerformed(ActionEvent click)
                 {
-                    //JButton next = (JButton)event.getSource();
-                    //JRadioButton choice = (JRadioButton)event.getSource();                   
+                    //get source of click
                     Object source = click.getSource();
-                    if(source == btn1){
-                        scoreList.set(1) = scoreList.get(i) + 1;
-                        Q1A = "A"; /**should be adding a point to dogs in the arraylist*/
+                    
+                    //adding points (making sure click on button and pressed next!!)
+                    if((source == btn1) && (source == btnNewFrame)){
+                        Scores.addPointD0();
                     }
-                    if(source == btn2){
-                        Q1A = "B"; /**should be adding a point to dogs in the arraylist*/
+                    if((source == btn1) && (source == btnNewFrame)){
+                        Scores.addPointD1();
                     }
+                    //next 
                     if(source == btnNewFrame){
                         Q2 frame = new Q2();
                         frame.setVisible(true);
-                    }
-                                       
+                    }    
+                    //back
+                    if(source == btnBackFrame){
+                        Menu frame = new Menu(); /**this isnt working?*/
+                        frame.setVisible(true);
+                    } 
                     //set default close operation
                     dispose();
                 }
@@ -105,10 +115,11 @@ public class Q1 extends JFrame
             });
         //set font of the Button
         btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
-        //set bounds of the Button
-        btnNewFrame.setBounds(280, 195, 78, 25);
+        btnBackFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
+
+        
         //add Button into contentPane
         contentPane.add(btnNewFrame);
-
+        contentPane.add(btnBackFrame);
     }
 }
