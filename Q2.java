@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import java.awt.Dimension;
-import javax.swing.border.EmptyBorder;
+import javax.swing.border.EmptyBorder; 
 import java.awt.FlowLayout;
 import java.awt.Container;
 import java.awt.GridLayout;

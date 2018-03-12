@@ -53,7 +53,7 @@ public class Menu extends JFrame
         intro.setFont(new Font("Times New Roman", Font.BOLD, 18));
         //set bound of the label
         intro.setBounds(327, 195, 78, 39);
-        //add label to the contentPane
+        //add label to the contentPane 
         contentPane.add(intro);
         contentPane.add(intro2);
         //create object of JButton and set label on it

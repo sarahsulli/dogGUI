@@ -23,4 +23,4 @@ public class GetDog {
         ArrayList<String> dogList2 = Doggos.getList();
         result = dogList2.get(highDogIndex);            
     }   
-}
+} 
