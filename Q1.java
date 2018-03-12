@@ -18,14 +18,12 @@ import java.awt.event.*;
 import java.util.ArrayList;
 
 //create class and extend with JFrame
-public class Q1 extends JFrame 
+public class Q1 extends JFrame
 {
     //declare variable
     private JPanel contentPane;
-
+    private JFrame theFrame;
     //setting up radio buttons
-
-
 
     /**
      * Create the frame.
@@ -76,12 +74,11 @@ public class Q1 extends JFrame
         group.add(btn2);        
         contentPane.add(btn1);
         contentPane.add(btn2);
-        
-
 
         //create object of JButton and set label on it
         JButton btnNewFrame = new JButton("Next");
         JButton btnBackFrame = new JButton("Back");
+
         //add actionListener
         btnNewFrame.addActionListener(new ActionListener()
             {
@@ -90,7 +87,7 @@ public class Q1 extends JFrame
                 {
                     //get source of click
                     Object source = click.getSource();
-                    
+
                     //adding points (making sure click on button and pressed next!!)
                     if((source == btn1) && (source == btnNewFrame)){
                         Scores.addPointD0();
@@ -104,22 +101,38 @@ public class Q1 extends JFrame
                         frame.setVisible(true);
                     }    
                     //back
+
                     if(source == btnBackFrame){
-                        Menu frame = new Menu(); /**this isnt working?*/
-                        frame.setVisible(true);
+                        try 
+                        {
+                            //Create object of Menu
+                            Menu frame = new Menu();
+                            //set frame visible true
+                            frame.setVisible(true); 
+
+                        } 
+                        catch (Exception e)
+                        {
+                            e.printStackTrace();
+                        }
+
                     } 
+
                     //set default close operation
                     dispose();
                 }
 
             });
+
         //set font of the Button
         btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
-        btnBackFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
+        btnBackFrame.setFont(new 
+            Font("Microsoft YaHei UI", Font.BOLD, 12));
 
-        
         //add Button into contentPane
         contentPane.add(btnNewFrame);
         contentPane.add(btnBackFrame);
+
     }
+
 }

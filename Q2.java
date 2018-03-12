@@ -22,7 +22,7 @@ public class Q2 extends JFrame
 {
     //declare variable
     private JPanel contentPane;
-
+    private JFrame theFrame;
     //setting up radio buttons
 
 

@@ -61,7 +61,7 @@ public class Menu extends JFrame
         //add actionListener
         btnNewFrame.addActionListener(new ActionListener()
             {
-                public void actionPerformed(ActionEvent arg0)
+                public void actionPerformed(ActionEvent click)
                 {
                     //call the object of Q1 and set visible true
                     Q1 frame = new Q1();

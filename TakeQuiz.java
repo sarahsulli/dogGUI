@@ -19,7 +19,7 @@ public class TakeQuiz
                     //try - catch block
                     try 
                     {
-                        //Create object of OldWindow
+                        //Create object of Menu
                         Menu frame = new Menu();
                         //set frame visible true
                         frame.setVisible(true); 
