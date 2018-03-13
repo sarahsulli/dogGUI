@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Doggos {
    private String golden = "Golden Retreiver";
    private String lab = "Lab";
-   private ArrayList<String> dogList;
+   private ArrayList<String> dogList; 
 
    public Doggos() {
        dogList = new ArrayList<String>();

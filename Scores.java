@@ -13,7 +13,7 @@ public class Scores {
 
    public Scores() {
        scoreList = new ArrayList<Integer>();
-       scoreList.add(golden);
+       scoreList.add(golden); 
        scoreList.add(lab);
    }
 
