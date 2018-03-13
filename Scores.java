@@ -20,8 +20,7 @@ public class Scores {
    public ArrayList<Integer> getList() {
        return scoreList;
     }
-   //methods to add point to each dog "add point Dog # 'x'"
-   
+   //methods to add point to each dog "add point Dog # 'x'"   
    public ArrayList<Integer> addPointD0(){
        scoreList.set(0, (scoreList.get(0) +1));
        return scoreList;

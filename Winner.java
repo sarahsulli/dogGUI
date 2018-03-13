@@ -18,23 +18,23 @@ import java.awt.event.*;
 import java.util.ArrayList;
 
 //create class and extend with JFrame
-public class Q2 extends JFrame 
+public class Winner extends JFrame 
 {
     //declare variable
     private JPanel contentPane;
     private JFrame theFrame;
     //setting up radio buttons
 
-
+   
 
     /**
      * Create the frame.
      */
-    public Q2 ()//constructor 
+    public Winner ()//constructor 
     {
 
         //set frame title
-        setTitle("Question 2");
+        setTitle("Your Spirit Dog");
         //set default close operation
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         //set bounds of the frame
@@ -50,8 +50,11 @@ public class Q2 extends JFrame
         contentPane.setSize(new Dimension(600,200));
         contentPane.setBounds(80, 95, 78, 25);
 
+
+        
+        
         //set Label in the frame
-        JLabel intro = new JLabel("Question two");
+        JLabel intro = new JLabel("Your spirit dog is..... " );
         //set foreground color to the label
         intro.setForeground(Color.BLACK);
         //set font of that label
@@ -60,30 +63,22 @@ public class Q2 extends JFrame
         intro.setBounds(327, 195, 78, 39);
         //add label to the contentPane
         contentPane.add(intro);
-
-        //set button group
-        ButtonGroup group = new ButtonGroup();
-
-        final JRadioButton btn1 = new JRadioButton("A on Q2");btn1.setSelected(false);       
-        btn1.setForeground(Color.BLACK);
-        btn1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
-
-        final JRadioButton btn2 = new JRadioButton("B on Q2");btn1.setSelected(false);
-        btn2.setForeground(Color.BLACK);
-        btn2.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
-
-        group.add(btn1);
-        group.add(btn2);        
-        contentPane.add(btn1);
-        contentPane.add(btn2);
         
 
 
         //create object of JButton and set label on it
         final JButton btnNewFrame = new JButton("Next");
         final JButton btnBackFrame = new JButton("Back");
+        //set font of the Button
+        btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
+        btnBackFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));        
+        //add Button into contentPane
+        contentPane.add(btnNewFrame);
+        contentPane.add(btnBackFrame);
+        
         //add actionListener
         btnNewFrame.addActionListener(new ActionListener()
+        
             {
                 private Scores Scores;
                 public void actionPerformed(ActionEvent click)
@@ -91,18 +86,6 @@ public class Q2 extends JFrame
                     //get source of click
                     Object source = click.getSource();
                     
-                    //adding points (making sure click on button and pressed next!!)
-                    if((source == btn1) && (source == btnNewFrame)){
-                        Scores.addPointD0();
-                    }
-                    if((source == btn1) && (source == btnNewFrame)){
-                        Scores.addPointD1();
-                    }
-                    //next 
-                    if(source == btnNewFrame){
-                        Winner frame = new Winner(); /**will become Q3*/
-                        frame.setVisible(true);
-                    }    
                     //back
                     if(source == btnBackFrame){
                         Q1 frame = new Q1(); /**this isnt working?*/
@@ -113,13 +96,6 @@ public class Q2 extends JFrame
                 }
 
             });
-        //set font of the Button
-        btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
-        btnBackFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
 
-        
-        //add Button into contentPane
-        contentPane.add(btnNewFrame);
-        contentPane.add(btnBackFrame);
     }
 }

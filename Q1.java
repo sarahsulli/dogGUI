@@ -61,12 +61,12 @@ public class Q1 extends JFrame
 
         //set button group
         ButtonGroup group = new ButtonGroup();
-
-        JRadioButton btn1 = new JRadioButton("A");btn1.setSelected(false);       
+        
+        final JRadioButton btn1 = new JRadioButton("A");btn1.setSelected(false);       
         btn1.setForeground(Color.BLACK);
         btn1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
 
-        JRadioButton btn2 = new JRadioButton("B");btn1.setSelected(false);
+        final JRadioButton btn2 = new JRadioButton("B");btn1.setSelected(false);
         btn2.setForeground(Color.BLACK);
         btn2.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
 
@@ -76,8 +76,8 @@ public class Q1 extends JFrame
         contentPane.add(btn2);
 
         //create object of JButton and set label on it
-        JButton btnNewFrame = new JButton("Next");
-        JButton btnBackFrame = new JButton("Back");
+        final JButton btnNewFrame = new JButton("Next");
+        final JButton btnBackFrame = new JButton("Back");
 
         //add actionListener
         btnNewFrame.addActionListener(new ActionListener()
@@ -103,18 +103,8 @@ public class Q1 extends JFrame
                     //back
 
                     if(source == btnBackFrame){
-                        try 
-                        {
-                            //Create object of Menu
-                            Menu frame = new Menu();
-                            //set frame visible true
-                            frame.setVisible(true); 
-
-                        } 
-                        catch (Exception e)
-                        {
-                            e.printStackTrace();
-                        }
+                        Menu frame = new Menu();
+                        frame.setVisible(true);
 
                     } 
 

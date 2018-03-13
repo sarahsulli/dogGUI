@@ -3,7 +3,7 @@ public class GetDog {
     private Scores Scores;
     private Doggos Doggos;
     private static int highDogIndex;
-    private String result;
+    private static String result;
     //example
     public GetDog() {
         Scores = new Scores();
