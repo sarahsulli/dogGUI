@@ -7,7 +7,7 @@
  */
 import java.util.ArrayList;
 public class Scores {
-   private int golden = 1;
+   private int golden = 0;
    private int lab = 0;
    public static ArrayList<Integer> scoreList;
 

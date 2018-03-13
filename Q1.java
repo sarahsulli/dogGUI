@@ -61,7 +61,7 @@ public class Q1 extends JFrame
 
         //set button group
         ButtonGroup group = new ButtonGroup();
-        
+
         final JRadioButton btn1 = new JRadioButton("A");btn1.setSelected(false);       
         btn1.setForeground(Color.BLACK);
         btn1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
@@ -78,7 +78,16 @@ public class Q1 extends JFrame
         //create object of JButton and set label on it
         final JButton btnNewFrame = new JButton("Next");
         final JButton btnBackFrame = new JButton("Back");
+        //set font of the Button
+        btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
+        btnBackFrame.setFont(new 
+            Font("Microsoft YaHei UI", Font.BOLD, 12));
 
+        //add Button into contentPane
+        contentPane.add(btnNewFrame);
+        contentPane.add(btnBackFrame);
+
+        /** how to make 1 action listner for everything??*/
         //add actionListener
         btnNewFrame.addActionListener(new ActionListener()
             {
@@ -112,17 +121,72 @@ public class Q1 extends JFrame
                     dispose();
                 }
 
+            }); 
+        btnBackFrame.addActionListener(new ActionListener(){
+                public void actionPerformed(ActionEvent click)
+                {
+                    //get source of click
+                    Object source = click.getSource();
+
+                    //back
+                    if(source == btnBackFrame){
+                        Q1 frame = new Q1(); 
+                        frame.setVisible(true);
+                    } 
+                    //set default close operation
+                    dispose();
+                }
+
             });
 
-        //set font of the Button
-        btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
-        btnBackFrame.setFont(new 
-            Font("Microsoft YaHei UI", Font.BOLD, 12));
+        /**
 
-        //add Button into contentPane
-        contentPane.add(btnNewFrame);
-        contentPane.add(btnBackFrame);
+        btnNewFrame.addActionListener(new ActionListener()
+        {
+        private Scores Scores;
+        public void actionPerformed(ActionEvent click)
+        {
+        //get source of click
+        Object source = click.getSource();
+        //next 
+        if(source == btnNewFrame){
+        GetDog frame = new GetDog(); 
+        frame.setVisible(true);
+        }    
 
+        //set default close operation
+        dispose();
+        }
+
+        });
+
+            
+        btn1.addActionListener(new ActionListener(){
+        private Scores Scores;
+        public void actionPerformed(ActionEvent click)
+        {
+        Object source = click.getSource();
+
+        //adding points (making sure click on button and pressed next!!)
+        if((source == btn1) && (source == btnNewFrame)){
+        Scores.addPointD0();
+        }
+        }
+
+        });
+        btn1.addActionListener(new ActionListener(){
+        private Scores Scores;
+        public void actionPerformed(ActionEvent click)
+        {
+        Object source = click.getSource();
+
+        //adding points (making sure click on button and pressed next!!)
+        if((source == btn2) && (source == btnNewFrame)){
+        Scores.addPointD1();
+        }
+        }
+
+        });    */
     }
 
 }
