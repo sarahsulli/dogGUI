@@ -61,8 +61,8 @@ public class Q1 extends JFrame
         ButtonGroup group = new ButtonGroup();
 
         final JRadioButton btn1 = new JRadioButton("Small");btn1.setSelected(false);       
-        final JRadioButton btn2 = new JRadioButton("Medium");btn1.setSelected(false);
-        final JRadioButton btn3 = new JRadioButton("Large");btn1.setSelected(false);       
+        final JRadioButton btn2 = new JRadioButton("Medium");btn2.setSelected(false);
+        final JRadioButton btn3 = new JRadioButton("Large");btn3.setSelected(false);       
         btn1.setForeground(Color.BLACK);
         btn2.setForeground(Color.BLACK);
         btn3.setForeground(Color.BLACK);
@@ -84,8 +84,6 @@ public class Q1 extends JFrame
         btnQuitFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
         contentPane.add(btnNewFrame);
         contentPane.add(btnQuitFrame);        
-
-
 
         btnNewFrame.addActionListener(new ActionListener()
             {
@@ -110,7 +108,7 @@ public class Q1 extends JFrame
                 public void actionPerformed(ActionEvent click)
                 {
                     int option = JOptionPane.showConfirmDialog(null, "Are you sure you want to quit?"
-                    + " All data will be lost", 
+                            + " All data will be lost", 
                             "Quit" ,JOptionPane.YES_NO_OPTION); 
                     if(option == JOptionPane.YES_OPTION)
                     {
@@ -120,7 +118,7 @@ public class Q1 extends JFrame
                 }
 
             });
-
+        //small dog
         btn1.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent click)
                 {
@@ -128,7 +126,10 @@ public class Q1 extends JFrame
                     Scores scr = new Scores();
                     //adding points (making sure click on button and pressed next!!)
                     if(source == btn1){
-                        scr.addPointD0();
+                        scr.addPointD4();
+                        scr.addPointD9(); 
+                        scr.addPointD10();
+                        scr.addPointD12();
                         Q2 frame = new Q2(); 
                         frame.setVisible(true);
                     }
@@ -136,6 +137,7 @@ public class Q1 extends JFrame
                 }
 
             });
+        //med dog
         btn2.addActionListener(new ActionListener(){
 
                 public void actionPerformed(ActionEvent click)
@@ -144,7 +146,8 @@ public class Q1 extends JFrame
                     Scores scr = new Scores();
                     //adding points (making sure click on button and pressed next!!)
                     if(source == btn2){
-                        scr.addPointD1();
+                        scr.addPointD8();
+                        scr.addPointD13();
                         Q2 frame = new Q2(); 
                         frame.setVisible(true);
                     }
@@ -152,6 +155,7 @@ public class Q1 extends JFrame
                 }
 
             });
+        //big dog
         btn3.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent click)
                 {
@@ -159,7 +163,14 @@ public class Q1 extends JFrame
                     Scores scr = new Scores();
                     //adding points (making sure click on button and pressed next!!)
                     if(source == btn3){
+                        scr.addPointD0();
+                        scr.addPointD1();
                         scr.addPointD2();
+                        scr.addPointD3();
+                        scr.addPointD5();
+                        scr.addPointD6();
+                        scr.addPointD7();
+                        scr.addPointD14();
                         Q2 frame = new Q2(); 
                         frame.setVisible(true);
                     }

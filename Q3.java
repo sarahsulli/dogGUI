@@ -18,7 +18,7 @@ import javax.swing.JRadioButton;
 import java.awt.event.*;
 import java.util.ArrayList;
 
-public class Q2 extends JFrame
+public class Q3 extends JFrame
 {
     private JPanel contentPane;
     private Scores Scores;
@@ -27,72 +27,84 @@ public class Q2 extends JFrame
     /**
      * Create the frame.
      */
-    public Q2 ()//constructor 
+    public Q3()//constructor 
     {
-        setTitle("Question 2");
+        //set frame title
+        setTitle("Question 3");
+        //set default close operation
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        //set bounds of the frame
         setBounds(100, 100, 550, 500);                           
+        //create object of JPanel
         contentPane = new JPanel();
 
+        //set border
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+        //set ContentPane
         setContentPane(contentPane);
         /**contentPane.setLayout(new FlowLayout());*/
         contentPane.setSize(new Dimension(600,200));
         contentPane.setBounds(80, 95, 78, 25);
 
-        JLabel intro = new JLabel("What best describes what kind of dog you want?");
+        //set Label in the frame
+        JLabel intro = new JLabel("What kind of house do you have?");
+        //set foreground color to the label
         intro.setForeground(Color.BLACK);
+        //set font of that label
         intro.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18));
+        //set bound of the label
         intro.setBounds(327, 195, 78, 39);
+        //add label to the contentPane
         contentPane.add(intro);
 
+        //set button group
         ButtonGroup group = new ButtonGroup();
 
-        final JRadioButton btn1 = new JRadioButton("A cuddle friend who doesn't need tons of exercise");btn1.setSelected(false);       
-        final JRadioButton btn2 = new JRadioButton("Sporty and high energy");btn2.setSelected(false);
-        final JRadioButton btn3 = new JRadioButton("Family frendly");btn3.setSelected(false);    
-        final JRadioButton btn4 = new JRadioButton("An independent dog");btn4.setSelected(false);               
+        final JRadioButton btn1 = new JRadioButton("Apartment with no yard");btn1.setSelected(false);       
+        final JRadioButton btn2 = new JRadioButton("Medium house or apartment with small yard");btn2.setSelected(false);
+        final JRadioButton btn3 = new JRadioButton("House with yard");btn3.setSelected(false);       
         btn1.setForeground(Color.BLACK);
         btn2.setForeground(Color.BLACK);
         btn3.setForeground(Color.BLACK);
-        btn4.setForeground(Color.BLACK);
         btn1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
         btn2.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
         btn3.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
-        btn4.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
         group.add(btn1);
         group.add(btn2); 
-        group.add(btn3);       
-        group.add(btn4);                
+        group.add(btn3);                
         contentPane.add(btn1);
         contentPane.add(btn2);
         contentPane.add(btn3);
-        contentPane.add(btn4);
 
+        //create object of JButton and set label on it        
         final JButton btnNewFrame = new JButton("Next");
         final JButton btnQuitFrame = new JButton("Quit");
         btnQuitFrame.setForeground(Color.RED);
-        btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));        
+        btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
         btnQuitFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
         contentPane.add(btnNewFrame);
-        contentPane.add(btnQuitFrame);
+        contentPane.add(btnQuitFrame);        
 
         btnNewFrame.addActionListener(new ActionListener()
             {
+
                 public void actionPerformed(ActionEvent click)
                 {
+                    //get source of click
                     Object source = click.getSource();
+                    //next 
                     if(source == btnNewFrame){
-                        Q3 frame = new Q3(); 
+                        GetDog frame = new GetDog(); 
                         frame.setVisible(true);
                     }    
+
+                    //set default close operation
                     dispose();
                 }
 
             });
         btnQuitFrame.addActionListener(new ActionListener()
             {
-                private Scores Scores;
                 public void actionPerformed(ActionEvent click)
                 {
                     int option = JOptionPane.showConfirmDialog(null, "Are you sure you want to quit?"
@@ -106,84 +118,70 @@ public class Q2 extends JFrame
                 }
 
             });
-        //cuddle and low-key
+        //apartment
         btn1.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent click)
                 {
                     Object source = click.getSource();
                     Scores scr = new Scores();
+                    //adding points (making sure click on button and pressed next!!)
                     if(source == btn1){
-                        scr.addPointD9();
+                        scr.addPointD3();
+                        scr.addPointD4();
+                        scr.addPointD9(); 
                         scr.addPointD10();
                         scr.addPointD11();
                         scr.addPointD12();
-                        Q3 frame = new Q3(); 
+                        scr.addPointD13();
+                        GetDog frame = new GetDog(); 
                         frame.setVisible(true);
                     }
                     dispose();
                 }
 
             });
-        //sporty
+        //small yard/ house
         btn2.addActionListener(new ActionListener(){
 
                 public void actionPerformed(ActionEvent click)
                 {
                     Object source = click.getSource();
                     Scores scr = new Scores();
-                    if(source == btn2){
+                    //adding points (making sure click on button and pressed next!!)
+                    if(source == btn2){                        
                         scr.addPointD0();
-                        scr.addPointD2();
-                        scr.addPointD3();
-                        scr.addPointD5();
-                        scr.addPointD7();
-                        scr.addPointD7();//add 2 points for corgie 
-                        Q3 frame = new Q3(); 
+                        scr.addPointD1();
+                        scr.addPointD6();
+                        scr.addPointD8();                       
+                        scr.addPointD13();
+                        scr.addPointD14();
+                        GetDog frame = new GetDog(); 
                         frame.setVisible(true);
                     }
                     dispose();
                 }
 
             });
-        //family
+        //house + big yard
         btn3.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent click)
                 {
                     Object source = click.getSource();
                     Scores scr = new Scores();
+                    //adding points (making sure click on button and pressed next!!)
                     if(source == btn3){
                         scr.addPointD0();
                         scr.addPointD1();
-                        scr.addPointD3();
-                        scr.addPointD4();
-                        scr.addPointD6();
-                        scr.addPointD9();
-                        scr.addPointD12();
-                        scr.addPointD14();
-                        Q3 frame = new Q3(); 
-                        frame.setVisible(true);
-                    }
-                    dispose();
-                }
-
-            });   
-        //independent 
-        btn4.addActionListener(new ActionListener(){
-                public void actionPerformed(ActionEvent click)
-                {
-                    Object source = click.getSource();
-                    Scores scr = new Scores();
-                    if(source == btn4){
+                        scr.addPointD2();
                         scr.addPointD5();
-                        scr.addPointD12();
-                        scr.addPointD13();
-                        Q3 frame = new Q3(); 
+                        scr.addPointD7();
+                        GetDog frame = new GetDog(); 
                         frame.setVisible(true);
                     }
                     dispose();
                 }
 
-            }); 
+            });    
     } 
 
 }

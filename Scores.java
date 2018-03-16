@@ -7,22 +7,21 @@
  */
 import java.util.ArrayList;
 public class Scores {
-    int golden = 0;
-    int lab = 0;
-    int germanShepherd = 0;
-
-    int poodle = 0;
-    int frenchBulldog = 0;
-    int huskie = 0;
-    int greatDane = 0;
-    int borderCollie = 0;
-    int corgie = 0;   
-    int shihTzu = 0;      
-    int pomeranian = 0;
-    int chihuahua = 0;
-    int havanse = 0;
-    int shibaInu = 0;
-    int newfoundland = 0;
+    int golden = 0;         //0
+    int lab = 0;            //1
+    int germanShepherd = 0; //2
+    int poodle = 0;         //3
+    int frenchBulldog = 0;  //4
+    int huskie = 0;         //5
+    int greatDane = 0;      //6
+    int borderCollie = 0;   //7
+    int corgie = 0;         //8
+    int maltese = 0;        //9 
+    int pomeranian = 0;     //10
+    int chihuahua = 0;      //11
+    int havanse = 0;        //12
+    int shibaInu = 0;       //13
+    int newfoundland = 0;   //14 
 
     public static ArrayList<Integer> scoreList = new ArrayList<Integer>();
     public Scores() {        
@@ -36,7 +35,7 @@ public class Scores {
         scoreList.add(greatDane);
         scoreList.add(borderCollie);
         scoreList.add(corgie);
-        scoreList.add(shihTzu);
+        scoreList.add(maltese);
         scoreList.add(pomeranian);
         scoreList.add(chihuahua);        
         scoreList.add(havanse);
@@ -127,11 +126,6 @@ public class Scores {
 
     public ArrayList<Integer> addPointD14(){
         scoreList.set(14, (scoreList.get(14) +1));
-        return scoreList;
-    }
-
-    public ArrayList<Integer> addPointD15(){
-        scoreList.set(15, (scoreList.get(15) +1));
         return scoreList;
     }
 
