@@ -7,6 +7,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JOptionPane;
 import java.awt.Dimension;
 import javax.swing.border.EmptyBorder;
 import java.awt.FlowLayout; 
@@ -16,7 +17,6 @@ import javax.swing.ButtonGroup;
 import javax.swing.JRadioButton;
 import java.awt.event.*;
 import java.util.ArrayList;
-
 
 public class Q2 extends JFrame
 {
@@ -65,11 +65,14 @@ public class Q2 extends JFrame
         contentPane.add(btn3);
 
         final JButton btnNewFrame = new JButton("Next");
-        final JButton btnBackFrame = new JButton("Back");
+        final JButton btnBackFrame = new JButton("Back");       
+        final JButton btnQuitFrame = new JButton("Quit");
+        btnQuitFrame.setForeground(Color.RED);
         btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
         btnBackFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
         contentPane.add(btnNewFrame);
         contentPane.add(btnBackFrame);
+        contentPane.add(btnQuitFrame);
 
         btnBackFrame.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent click)
@@ -98,13 +101,28 @@ public class Q2 extends JFrame
                 }
 
             });
+        btnQuitFrame.addActionListener(new ActionListener()
+            {
+                private Scores Scores;
+                public void actionPerformed(ActionEvent click)
+                {
+                    int option = JOptionPane.showConfirmDialog(null, "Are you sure you want to quit?"
+                            + " All data will be lost", 
+                            "Quit" ,JOptionPane.YES_NO_OPTION); 
+                    if(option == JOptionPane.YES_OPTION)
+                    {
+                        dispose();
+                    }
 
+                }
+
+            });
         btn1.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent click)
                 {
                     Object source = click.getSource();
                     Scores scr = new Scores();
-                    if((source == btn1) /**&& (source == btnNewFrame)*/){
+                    if(source == btn1){
                         scr.addPointD0();
                         GetDog frame = new GetDog(); 
                         frame.setVisible(true);
@@ -119,7 +137,7 @@ public class Q2 extends JFrame
                 {
                     Object source = click.getSource();
                     Scores scr = new Scores();
-                    if((source == btn2)/**&& (source == btnNewFrame)*/){
+                    if(source == btn2){
                         scr.addPointD1();
                         GetDog frame = new GetDog(); 
                         frame.setVisible(true);
@@ -134,7 +152,7 @@ public class Q2 extends JFrame
                 {
                     Object source = click.getSource();
                     Scores scr = new Scores();
-                    if((source == btn3) /**&& (source == btnNewFrame)*/){
+                    if(source == btn3){
                         scr.addPointD2();
                         GetDog frame = new GetDog(); 
                         frame.setVisible(true);

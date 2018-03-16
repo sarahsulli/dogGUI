@@ -65,14 +65,18 @@ public class GetDog extends JFrame{
         Doggos dCopy = new Doggos();
         
         JLabel intro = new JLabel("YOUR SPIRIT DOG IS...." + dCopy.findDog());
-        final JButton btnMenuFrame = new JButton("Retake Quiz"); 
+        
         intro.setForeground(Color.BLACK);
         intro.setBounds(327, 195, 78, 39);
         intro.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18));
+        final JButton btnMenuFrame = new JButton("Retake Quiz"); 
+        final JButton btnQuitFrame = new JButton("Quit"); 
         btnMenuFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
-
+        btnQuitFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
+        btnQuitFrame.setForeground(Color.RED);       
         contentPane.add(intro);
         contentPane.add(btnMenuFrame);
+        contentPane.add(btnQuitFrame);
         //add actionListener
         btnMenuFrame.addActionListener(new ActionListener()        
             {
@@ -90,7 +94,14 @@ public class GetDog extends JFrame{
                     dispose();
                 }
 
-            }); //end of GUI           
+            }); 
+        btnQuitFrame.addActionListener(new ActionListener()
+            {
+                public void actionPerformed(ActionEvent click)
+                {
+                    dispose();
+                }
+            });    
     }  
 
 } 

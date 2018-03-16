@@ -10,8 +10,9 @@ import javax.swing.JPanel;
 import java.awt.Dimension;
 import javax.swing.border.EmptyBorder;
 import java.awt.FlowLayout;
-
-
+import javax.swing.ImageIcon;
+import javax.swing.AbstractButton;
+import java.awt.event.*;
 
 //create class and extend with JFrame
 public class Menu extends JFrame 
@@ -19,6 +20,16 @@ public class Menu extends JFrame
     //declare variable
     private JPanel contentPane;
     private JFrame theFrame;
+    protected JButton b1;
+    protected static ImageIcon createImageIcon(String path) {
+        java.net.URL imgURL = Menu.class.getResource(path);
+        if (imgURL != null) {
+            return new ImageIcon(imgURL);
+        } else {
+            System.err.println("Couldn't find file: " + path);
+            return null;
+        }
+    }
 
     /**
      * Create the frame.
@@ -56,9 +67,25 @@ public class Menu extends JFrame
         //add label to the contentPane 
         contentPane.add(intro);
         contentPane.add(intro2);
+
         //create object of JButton and set label on it
         JButton btnNewFrame = new JButton("Next");
-        //add actionListener
+        JButton btnInfoFrame = new JButton("What's this??");   
+        JButton btnQuitFrame = new JButton("Quit");
+        btnQuitFrame.setForeground(Color.RED);
+        //set font of the Button
+        btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
+        btnInfoFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
+        btnQuitFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
+        //set bounds of the Button
+        btnNewFrame.setBounds(280, 195, 78, 25);
+        btnInfoFrame.setBounds(280, 195, 78, 25);     
+        btnQuitFrame.setBounds(280, 195, 78, 25);        
+        //add Button into contentPane
+        contentPane.add(btnNewFrame);
+        contentPane.add(btnInfoFrame);
+        contentPane.add(btnQuitFrame);
+        //add actionListener        
         btnNewFrame.addActionListener(new ActionListener()
             {
                 public void actionPerformed(ActionEvent click)
@@ -70,13 +97,24 @@ public class Menu extends JFrame
                     dispose();
                 }
             });
-        //set font of the Button
-        btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
-        //set bounds of the Button
-        btnNewFrame.setBounds(280, 195, 78, 25);
-        //add Button into contentPane
-        contentPane.add(btnNewFrame);
-
+        btnInfoFrame.addActionListener(new ActionListener()
+            {
+                public void actionPerformed(ActionEvent click)
+                {
+                    //call the object of Q1 and set visible true
+                    Info frame = new Info();
+                    frame.setVisible(true);
+                    //set default close operation
+                    dispose();
+                }
+            });
+        btnQuitFrame.addActionListener(new ActionListener()
+            {
+                public void actionPerformed(ActionEvent click)
+                {
+                    dispose();
+                }
+            });
     }
 
 }

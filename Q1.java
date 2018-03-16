@@ -7,6 +7,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JOptionPane;
 import java.awt.Dimension;
 import javax.swing.border.EmptyBorder;
 import java.awt.FlowLayout; 
@@ -78,10 +79,15 @@ public class Q1 extends JFrame
         //create object of JButton and set label on it        
         final JButton btnNewFrame = new JButton("Next");
         final JButton btnBackFrame = new JButton("Back");
+        final JButton btnQuitFrame = new JButton("Quit");
+        btnQuitFrame.setForeground(Color.RED);
         btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
         btnBackFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
+        btnQuitFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
         contentPane.add(btnNewFrame);
         contentPane.add(btnBackFrame);
+        contentPane.add(btnQuitFrame);        
+
 
         btnBackFrame.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent click)
@@ -91,7 +97,7 @@ public class Q1 extends JFrame
 
                     //back
                     if(source == btnBackFrame){
-                        Q1 frame = new Q1(); 
+                        Menu frame = new Menu(); 
                         frame.setVisible(true);
                     } 
                     //set default close operation
@@ -102,7 +108,7 @@ public class Q1 extends JFrame
 
         btnNewFrame.addActionListener(new ActionListener()
             {
-                private Scores Scores;
+
                 public void actionPerformed(ActionEvent click)
                 {
                     //get source of click
@@ -118,6 +124,22 @@ public class Q1 extends JFrame
                 }
 
             });
+        btnQuitFrame.addActionListener(new ActionListener()
+            {
+                private Scores Scores;
+                public void actionPerformed(ActionEvent click)
+                {
+                    int option = JOptionPane.showConfirmDialog(null, "Are you sure you want to quit?"
+                    + " All data will be lost", 
+                            "Quit" ,JOptionPane.YES_NO_OPTION); 
+                    if(option == JOptionPane.YES_OPTION)
+                    {
+                        dispose();
+                    }
+
+                }
+
+            });
 
         btn1.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent click)
@@ -125,7 +147,7 @@ public class Q1 extends JFrame
                     Object source = click.getSource();
                     Scores scr = new Scores();
                     //adding points (making sure click on button and pressed next!!)
-                    if((source == btn1)){
+                    if(source == btn1){
                         scr.addPointD0();
                         Q2 frame = new Q2(); 
                         frame.setVisible(true);
@@ -141,7 +163,7 @@ public class Q1 extends JFrame
                     Object source = click.getSource();
                     Scores scr = new Scores();
                     //adding points (making sure click on button and pressed next!!)
-                    if((source == btn2)){
+                    if(source == btn2){
                         scr.addPointD1();
                         Q2 frame = new Q2(); 
                         frame.setVisible(true);
@@ -157,7 +179,7 @@ public class Q1 extends JFrame
                     Object source = click.getSource();
                     Scores scr = new Scores();
                     //adding points (making sure click on button and pressed next!!)
-                    if((source == btn3) ){
+                    if(source == btn3){
                         scr.addPointD2();
                         Q2 frame = new Q2(); 
                         frame.setVisible(true);

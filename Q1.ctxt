@@ -13,4 +13,6 @@ comment5.params=click
 comment5.target=void\ actionPerformed(java.awt.event.ActionEvent)
 comment6.params=click
 comment6.target=void\ actionPerformed(java.awt.event.ActionEvent)
-numComments=7
+comment7.params=click
+comment7.target=void\ actionPerformed(java.awt.event.ActionEvent)
+numComments=8
