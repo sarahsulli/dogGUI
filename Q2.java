@@ -65,28 +65,12 @@ public class Q2 extends JFrame
         contentPane.add(btn3);
 
         final JButton btnNewFrame = new JButton("Next");
-        final JButton btnBackFrame = new JButton("Back");       
         final JButton btnQuitFrame = new JButton("Quit");
         btnQuitFrame.setForeground(Color.RED);
         btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));        
-        btnBackFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
         btnQuitFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
         contentPane.add(btnNewFrame);
-        contentPane.add(btnBackFrame);
         contentPane.add(btnQuitFrame);
-
-        btnBackFrame.addActionListener(new ActionListener(){
-                public void actionPerformed(ActionEvent click)
-                {
-                    Object source = click.getSource();
-                    if(source == btnBackFrame){
-                        Q1 frame = new Q1(); 
-                        frame.setVisible(true);
-                    } 
-                    dispose();
-                }
-
-            });
 
         btnNewFrame.addActionListener(new ActionListener()
             {

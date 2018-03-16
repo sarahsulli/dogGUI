@@ -47,7 +47,7 @@ public class Q1 extends JFrame
         contentPane.setBounds(80, 95, 78, 25);
 
         //set Label in the frame
-        JLabel intro = new JLabel("Question one");
+        JLabel intro = new JLabel("What size dog do you want?");
         //set foreground color to the label
         intro.setForeground(Color.BLACK);
         //set font of that label
@@ -60,9 +60,9 @@ public class Q1 extends JFrame
         //set button group
         ButtonGroup group = new ButtonGroup();
 
-        final JRadioButton btn1 = new JRadioButton("+GR");btn1.setSelected(false);       
-        final JRadioButton btn2 = new JRadioButton("+Lab");btn1.setSelected(false);
-        final JRadioButton btn3 = new JRadioButton("+GS");btn1.setSelected(false);       
+        final JRadioButton btn1 = new JRadioButton("Small");btn1.setSelected(false);       
+        final JRadioButton btn2 = new JRadioButton("Medium");btn1.setSelected(false);
+        final JRadioButton btn3 = new JRadioButton("Large");btn1.setSelected(false);       
         btn1.setForeground(Color.BLACK);
         btn2.setForeground(Color.BLACK);
         btn3.setForeground(Color.BLACK);
@@ -78,33 +78,14 @@ public class Q1 extends JFrame
 
         //create object of JButton and set label on it        
         final JButton btnNewFrame = new JButton("Next");
-        final JButton btnBackFrame = new JButton("Back");
         final JButton btnQuitFrame = new JButton("Quit");
         btnQuitFrame.setForeground(Color.RED);
         btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
-        btnBackFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
         btnQuitFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
         contentPane.add(btnNewFrame);
-        contentPane.add(btnBackFrame);
         contentPane.add(btnQuitFrame);        
 
 
-        btnBackFrame.addActionListener(new ActionListener(){
-                public void actionPerformed(ActionEvent click)
-                {
-                    //get source of click
-                    Object source = click.getSource();
-
-                    //back
-                    if(source == btnBackFrame){
-                        Menu frame = new Menu(); 
-                        frame.setVisible(true);
-                    } 
-                    //set default close operation
-                    dispose();
-                }
-
-            });
 
         btnNewFrame.addActionListener(new ActionListener()
             {
