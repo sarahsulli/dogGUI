@@ -124,28 +124,33 @@ public class Q1 extends JFrame
             });
 
         btn1.addActionListener(new ActionListener(){
-                private Scores Scores;
                 public void actionPerformed(ActionEvent click)
                 {
                     Object source = click.getSource();
-
+                    Scores scr = new Scores();
                     //adding points (making sure click on button and pressed next!!)
-                    if((source == btn1) && (source == btnNewFrame)){
-                        Scores.addPointD0();
+                    if((source == btn1)){
+                        scr.addPointD0();
+                        Q2 frame = new Q2(); 
+                        frame.setVisible(true);
                     }
+                                        dispose();
                 }
 
             });
         btn2.addActionListener(new ActionListener(){
-                private Scores Scores;
+
                 public void actionPerformed(ActionEvent click)
                 {
                     Object source = click.getSource();
-
+                    Scores scr = new Scores();
                     //adding points (making sure click on button and pressed next!!)
-                    if((source == btn1) && (source == btnNewFrame)){
-                        Scores.addPointD0();
+                    if((source == btn2)){
+                        scr.addPointD1();
+                        Q2 frame = new Q2(); 
+                        frame.setVisible(true);
                     }
+                                        dispose();
                 }
 
             });
@@ -154,11 +159,14 @@ public class Q1 extends JFrame
                 public void actionPerformed(ActionEvent click)
                 {
                     Object source = click.getSource();
-
+                    Scores scr = new Scores();
                     //adding points (making sure click on button and pressed next!!)
-                    if((source == btn2) && (source == btnNewFrame)){
-                        Scores.addPointD1();
+                    if((source == btn3) ){
+                        scr.addPointD2();
+                        Q2 frame = new Q2(); 
+                        frame.setVisible(true);
                     }
+                                        dispose();
                 }
 
             });    

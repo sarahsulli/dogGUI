@@ -124,28 +124,33 @@ public class Q2 extends JFrame
             });
 
         btn1.addActionListener(new ActionListener(){
-                private Scores Scores;
                 public void actionPerformed(ActionEvent click)
                 {
                     Object source = click.getSource();
-
+                    Scores scr = new Scores();
                     //adding points (making sure click on button and pressed next!!)
-                    if((source == btn1) && (source == btnNewFrame)){
-                        Scores.addPointD0();
+                    if((source == btn1) /**&& (source == btnNewFrame)*/){
+                        scr.addPointD0();
+                        GetDog frame = new GetDog(); 
+                        frame.setVisible(true);
                     }
+                                        dispose();
                 }
 
             });
         btn2.addActionListener(new ActionListener(){
-                private Scores Scores;
+
                 public void actionPerformed(ActionEvent click)
                 {
                     Object source = click.getSource();
-
+                    Scores scr = new Scores();
                     //adding points (making sure click on button and pressed next!!)
-                    if((source == btn1) && (source == btnNewFrame)){
-                        Scores.addPointD0();
+                    if((source == btn2)/**&& (source == btnNewFrame)*/){
+                        scr.addPointD1();
+                        GetDog frame = new GetDog(); 
+                        frame.setVisible(true);
                     }
+                                        dispose();
                 }
 
             });
@@ -154,14 +159,17 @@ public class Q2 extends JFrame
                 public void actionPerformed(ActionEvent click)
                 {
                     Object source = click.getSource();
-
+                    Scores scr = new Scores();
                     //adding points (making sure click on button and pressed next!!)
-                    if((source == btn2) && (source == btnNewFrame)){
-                        Scores.addPointD1();
+                    if((source == btn3) /**&& (source == btnNewFrame)*/){
+                        scr.addPointD2();
+                        GetDog frame = new GetDog(); 
+                        frame.setVisible(true);
                     }
+                                        dispose();
                 }
 
-            });    
+            });   
     } 
 
 }

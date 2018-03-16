@@ -1,10 +1,8 @@
 #BlueJ class context
 comment0.target=GetDog
 comment1.params=
-comment1.target=java.lang.String\ findDog()
-comment1.text=when\ I\ have\ a\ findIndex\ Class\ it\ wont\ show\ the\ window,\ if\ i\ \nput\ it\ in\ the\ constructor\ it\ shows\ but\ idk\ if\ it\ will\ show\ the\ correct\ dog\ winner\n\n\nNeeds\ to\ make\ the\ copy\ of\ array\ right\ -\ returning\ null\ i\ think\!\!\n
-comment2.params=
-comment2.target=GetDog()
-comment3.params=click
-comment3.target=void\ actionPerformed(java.awt.event.ActionEvent)
-numComments=4
+comment1.target=GetDog()
+comment1.text=public\ String\ findDog(){\n\ \ \ \ \ \ \ \ Doggos\ \=\ new\ Doggos();\n\ \ \ \ \ \ \ \ Doggos.getList\ \=\ (ArrayList<String>)theDogs.clone();\n\n\ \ \ \ \ \ \ \ ArrayList<String>\ dogList2\ \=\ Doggos.getList();\n\ \ \ \ \ \ \ \ int\ index\ \=\ Scores.highestScore();\n\ \ \ \ \ \ \ \ String\ result;\n\ \ \ \ \ \ \ \ result\ \=\ Doggos.getList().get(index);\ \n\ \ \ \ \ \ \ \ return\ result;\n}
+comment2.params=click
+comment2.target=void\ actionPerformed(java.awt.event.ActionEvent)
+numComments=3

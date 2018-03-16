@@ -4,4 +4,6 @@ comment1.params=
 comment1.target=Doggos()
 comment2.params=
 comment2.target=java.util.ArrayList\ getList()
-numComments=3
+comment3.params=
+comment3.target=java.lang.String\ findDog()
+numComments=4

@@ -65,8 +65,10 @@ public class GetDog extends JFrame{
         /**contentPane.setLayout(new FlowLayout());*/
         contentPane.setSize(new Dimension(600,200));
         contentPane.setBounds(80, 95, 78, 25);
-
-        JLabel intro = new JLabel("YOUR SPIRIT DOG IS...." + Doggos.findDog());// +findDog()
+        
+        Doggos dCopy = new Doggos();
+        
+        JLabel intro = new JLabel("YOUR SPIRIT DOG IS...." + dCopy.findDog());// +findDog()
         final JButton btnMenuFrame = new JButton("Retake Quiz"); 
         intro.setForeground(Color.BLACK);
         intro.setBounds(327, 195, 78, 39);
@@ -88,7 +90,10 @@ public class GetDog extends JFrame{
                     if(source == btnMenuFrame){
                         Menu frame = new Menu(); 
                         frame.setVisible(true);
-                        Scores.resetScores(); /**do you need to reset score?**/
+                        
+                        Scores sCopy = new Scores();
+                                
+                        sCopy.resetScores(); /**do you need to reset scores?**/
                     } 
                     //set default close operation
                     dispose();
