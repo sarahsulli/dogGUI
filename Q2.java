@@ -89,7 +89,6 @@ public class Q2 extends JFrame
 
         btnNewFrame.addActionListener(new ActionListener()
             {
-                private Scores Scores;
                 public void actionPerformed(ActionEvent click)
                 {
                     Object source = click.getSource();
@@ -147,7 +146,6 @@ public class Q2 extends JFrame
 
             });
         btn3.addActionListener(new ActionListener(){
-                private Scores Scores;
                 public void actionPerformed(ActionEvent click)
                 {
                     Object source = click.getSource();

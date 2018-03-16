@@ -126,7 +126,6 @@ public class Q1 extends JFrame
             });
         btnQuitFrame.addActionListener(new ActionListener()
             {
-                private Scores Scores;
                 public void actionPerformed(ActionEvent click)
                 {
                     int option = JOptionPane.showConfirmDialog(null, "Are you sure you want to quit?"
@@ -173,7 +172,6 @@ public class Q1 extends JFrame
 
             });
         btn3.addActionListener(new ActionListener(){
-                private Scores Scores;
                 public void actionPerformed(ActionEvent click)
                 {
                     Object source = click.getSource();
