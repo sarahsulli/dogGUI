@@ -39,22 +39,23 @@ public class Info extends JFrame
         contentPane.setSize(new Dimension(600,200));
         contentPane.setBounds(80, 95, 78, 25);
 
-
         JLabel intro = new JLabel("<html><b>For Out APCS final Project we've decided to create</b>"
-        +"<br> a program that determines what dog is right for you!"
-        +"<br> This GUI uses ~blah blah blah~  </html>"
-        ); /**fill out*/
-        
+                +"<br> a program that determines what dog is right for you!"
+                +"<br> This GUI uses ~blah blah blah~  </html>"
+            ); /**fill out*/
+
         intro.setForeground(Color.BLACK);
         intro.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18));
         intro.setBounds(327, 195, 78, 39);
         contentPane.add(intro);
 
-
         //create object of JButton and set label on it        
         final JButton btnBackFrame = new JButton("Take Me Back");
+        final JButton btnNewFrame = new JButton("Start Quiz!");
         btnBackFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
+        btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
         contentPane.add(btnBackFrame);
+        contentPane.add(btnNewFrame);
 
         btnBackFrame.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent click)
@@ -64,7 +65,7 @@ public class Info extends JFrame
 
                     //back
                     if(source == btnBackFrame){
-                        Q1 frame = new Q1(); 
+                        Menu frame = new Menu(); 
                         frame.setVisible(true);
                     } 
                     //set default close operation
@@ -72,6 +73,19 @@ public class Info extends JFrame
                 }
 
             }); 
+        btnNewFrame.addActionListener(new ActionListener()
+            {
+                public void actionPerformed(ActionEvent click)
+                {
+                    Object source = click.getSource();
+                    if(source == btnNewFrame){
+                        Q1 frame = new Q1(); 
+                        frame.setVisible(true);
+                    }    
+                    dispose();
+                }
+
+            });
     } 
 
 }

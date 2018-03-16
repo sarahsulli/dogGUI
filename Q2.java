@@ -40,7 +40,7 @@ public class Q2 extends JFrame
         contentPane.setSize(new Dimension(600,200));
         contentPane.setBounds(80, 95, 78, 25);
 
-        JLabel intro = new JLabel("Question one");
+        JLabel intro = new JLabel("Question two");
         intro.setForeground(Color.BLACK);
         intro.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18));
         intro.setBounds(327, 195, 78, 39);
@@ -68,8 +68,9 @@ public class Q2 extends JFrame
         final JButton btnBackFrame = new JButton("Back");       
         final JButton btnQuitFrame = new JButton("Quit");
         btnQuitFrame.setForeground(Color.RED);
-        btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
+        btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));        
         btnBackFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
+        btnQuitFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
         contentPane.add(btnNewFrame);
         contentPane.add(btnBackFrame);
         contentPane.add(btnQuitFrame);
