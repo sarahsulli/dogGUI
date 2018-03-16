@@ -18,31 +18,37 @@ import javax.swing.JRadioButton;
 import java.awt.event.*;
 import java.util.ArrayList;
 public class GetDog extends JFrame{
-    private Scores Scores;
+    private Scores Scores = new Scores();
     private Doggos Doggos;
-    private static int highDogIndex;
-    public static String result;
-    
-    private static int i;
-    
+
+    private int highDogIndex;
+
     private JPanel contentPane;
     private JFrame theFrame;
+
+    /**when I have a findIndex Class it wont show the window, if i 
+     *put it in the constructor it shows but idk if it will show the correct dog winner
+     *
+     *
+     *Needs to make the copy of array right - returning null i think!!
+     */
+
+    
+    //this method finds the Index of the highest score
+    /**public String findDog(){
+        Doggos = new Doggos();
+        Doggos.getList = (ArrayList<String>)theDogs.clone();
+
+        ArrayList<String> dogList2 = Doggos.getList();
+        int index = Scores.highestScore();
+        String result;
+        result = Doggos.getList().get(index); 
+        return result;
+    } */
+
+
+
     public GetDog() {
-        /**something is wrong with highDogIndex, when its set as 1 not 0 it returns lab*/
-        Scores = new Scores();
-        highDogIndex = 1;        
-        ArrayList<Integer> scoreList2 = Scores.getList();        
-        
-        for(i=0; i<scoreList2.size(); i++){
-            if (scoreList2.get(i) > highDogIndex) {
-                highDogIndex = i;
-            }
-        } 
-        //findDog(); 
-        
-        
-        
-        
         //set frame title
         setTitle("Your Spirit Dog");
         //set default close operation
@@ -60,57 +66,35 @@ public class GetDog extends JFrame{
         contentPane.setSize(new Dimension(600,200));
         contentPane.setBounds(80, 95, 78, 25);
 
-        
-        //set Label in the frame
-        JLabel intro = new JLabel("YOUR SPIRIT DOG IS...." + findDog());
-        //set foreground color to the label
+        JLabel intro = new JLabel("YOUR SPIRIT DOG IS...." + Doggos.findDog());// +findDog()
+        final JButton btnMenuFrame = new JButton("Retake Quiz"); 
         intro.setForeground(Color.BLACK);
-        //set font of that label
-        intro.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18));
-        //set bound of the label
         intro.setBounds(327, 195, 78, 39);
-        //add label to the contentPane
-        contentPane.add(intro);
-
-        
-        //create object of JButton and set label on it
-        final JButton btnMenuFrame = new JButton("Retake Quiz"); /**should reset scores*/
-
-        //set font of the Button
+        intro.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18));
         btnMenuFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
 
-        //add Button into contentPane
+        contentPane.add(intro);
         contentPane.add(btnMenuFrame);
-
-        
         //add actionListener
-        btnMenuFrame.addActionListener(new ActionListener()
-        
+        btnMenuFrame.addActionListener(new ActionListener()        
             {
                 private Scores Scores;
                 public void actionPerformed(ActionEvent click)
                 {
                     //get source of click
                     Object source = click.getSource();
-                    
-                    //back
+
+                    //restart
                     if(source == btnMenuFrame){
                         Menu frame = new Menu(); 
                         frame.setVisible(true);
+                        Scores.resetScores(); /**do you need to reset score?**/
                     } 
                     //set default close operation
                     dispose();
                 }
 
-            }); //end of GUI
-            
-    }
-
-    public String findDog(){
-        Doggos = new Doggos();
-        ArrayList<String> dogList2 = Doggos.getList();
-        result = dogList2.get(highDogIndex); 
-        return result;
-    }   
+            }); //end of GUI           
+    }  
 
 } 

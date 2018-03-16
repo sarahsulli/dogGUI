@@ -22,6 +22,7 @@ public class Q1 extends JFrame
 {
     //declare variable
     private JPanel contentPane;
+    private Scores Scores;
     private JFrame theFrame;
     //setting up radio buttons
 
@@ -62,66 +63,30 @@ public class Q1 extends JFrame
         //set button group
         ButtonGroup group = new ButtonGroup();
 
-        final JRadioButton btn1 = new JRadioButton("A");btn1.setSelected(false);       
+        final JRadioButton btn1 = new JRadioButton("+GR");btn1.setSelected(false);       
+        final JRadioButton btn2 = new JRadioButton("+Lab");btn1.setSelected(false);
+        final JRadioButton btn3 = new JRadioButton("+GS");btn1.setSelected(false);       
         btn1.setForeground(Color.BLACK);
-        btn1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
-
-        final JRadioButton btn2 = new JRadioButton("B");btn1.setSelected(false);
         btn2.setForeground(Color.BLACK);
+        btn3.setForeground(Color.BLACK);
+        btn1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
         btn2.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
-
+        btn3.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
         group.add(btn1);
-        group.add(btn2);        
+        group.add(btn2); 
+        group.add(btn3);                
         contentPane.add(btn1);
         contentPane.add(btn2);
+        contentPane.add(btn3);
 
-        //create object of JButton and set label on it
+        //create object of JButton and set label on it        
         final JButton btnNewFrame = new JButton("Next");
         final JButton btnBackFrame = new JButton("Back");
-        //set font of the Button
         btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
-        btnBackFrame.setFont(new 
-            Font("Microsoft YaHei UI", Font.BOLD, 12));
-
-        //add Button into contentPane
+        btnBackFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
         contentPane.add(btnNewFrame);
         contentPane.add(btnBackFrame);
 
-        /** how to make 1 action listner for everything??*/
-        //add actionListener
-        btnNewFrame.addActionListener(new ActionListener()
-            {
-                private Scores Scores;
-                public void actionPerformed(ActionEvent click)
-                {
-                    //get source of click
-                    Object source = click.getSource();
-
-                    //adding points (making sure click on button and pressed next!!)
-                    if((source == btn1) && (source == btnNewFrame)){
-                        Scores.addPointD0();
-                    }
-                    if((source == btn1) && (source == btnNewFrame)){
-                        Scores.addPointD1();
-                    }
-                    //next 
-                    if(source == btnNewFrame){
-                        Q2 frame = new Q2();
-                        frame.setVisible(true);
-                    }    
-                    //back
-
-                    if(source == btnBackFrame){
-                        Menu frame = new Menu();
-                        frame.setVisible(true);
-
-                    } 
-
-                    //set default close operation
-                    dispose();
-                }
-
-            }); 
         btnBackFrame.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent click)
                 {
@@ -139,54 +104,64 @@ public class Q1 extends JFrame
 
             });
 
-        /**
-
         btnNewFrame.addActionListener(new ActionListener()
-        {
-        private Scores Scores;
-        public void actionPerformed(ActionEvent click)
-        {
-        //get source of click
-        Object source = click.getSource();
-        //next 
-        if(source == btnNewFrame){
-        GetDog frame = new GetDog(); 
-        frame.setVisible(true);
-        }    
+            {
+                private Scores Scores;
+                public void actionPerformed(ActionEvent click)
+                {
+                    //get source of click
+                    Object source = click.getSource();
+                    //next 
+                    if(source == btnNewFrame){
+                        Q2 frame = new Q2(); 
+                        frame.setVisible(true);
+                    }    
 
-        //set default close operation
-        dispose();
-        }
+                    //set default close operation
+                    dispose();
+                }
 
-        });
+            });
 
-            
         btn1.addActionListener(new ActionListener(){
-        private Scores Scores;
-        public void actionPerformed(ActionEvent click)
-        {
-        Object source = click.getSource();
+                private Scores Scores;
+                public void actionPerformed(ActionEvent click)
+                {
+                    Object source = click.getSource();
 
-        //adding points (making sure click on button and pressed next!!)
-        if((source == btn1) && (source == btnNewFrame)){
-        Scores.addPointD0();
-        }
-        }
+                    //adding points (making sure click on button and pressed next!!)
+                    if((source == btn1) && (source == btnNewFrame)){
+                        Scores.addPointD0();
+                    }
+                }
 
-        });
-        btn1.addActionListener(new ActionListener(){
-        private Scores Scores;
-        public void actionPerformed(ActionEvent click)
-        {
-        Object source = click.getSource();
+            });
+        btn2.addActionListener(new ActionListener(){
+                private Scores Scores;
+                public void actionPerformed(ActionEvent click)
+                {
+                    Object source = click.getSource();
 
-        //adding points (making sure click on button and pressed next!!)
-        if((source == btn2) && (source == btnNewFrame)){
-        Scores.addPointD1();
-        }
-        }
+                    //adding points (making sure click on button and pressed next!!)
+                    if((source == btn1) && (source == btnNewFrame)){
+                        Scores.addPointD0();
+                    }
+                }
 
-        });    */
-    }
+            });
+        btn3.addActionListener(new ActionListener(){
+                private Scores Scores;
+                public void actionPerformed(ActionEvent click)
+                {
+                    Object source = click.getSource();
+
+                    //adding points (making sure click on button and pressed next!!)
+                    if((source == btn2) && (source == btnNewFrame)){
+                        Scores.addPointD1();
+                    }
+                }
+
+            });    
+    } 
 
 }
