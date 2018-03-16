@@ -17,21 +17,17 @@ import javax.swing.JRadioButton;
 import java.awt.event.*;
 import java.util.ArrayList;
 
-//create class and extend with JFrame
 public class Q1 extends JFrame
 {
-    //declare variable
     private JPanel contentPane;
     private Scores Scores;
     private JFrame theFrame;
-    //setting up radio buttons
 
     /**
      * Create the frame.
      */
     public Q1 ()//constructor 
     {
-
         //set frame title
         setTitle("Question 1");
         //set default close operation
@@ -134,7 +130,7 @@ public class Q1 extends JFrame
                         Q2 frame = new Q2(); 
                         frame.setVisible(true);
                     }
-                                        dispose();
+                    dispose();
                 }
 
             });
@@ -150,7 +146,7 @@ public class Q1 extends JFrame
                         Q2 frame = new Q2(); 
                         frame.setVisible(true);
                     }
-                                        dispose();
+                    dispose();
                 }
 
             });
@@ -166,7 +162,7 @@ public class Q1 extends JFrame
                         Q2 frame = new Q2(); 
                         frame.setVisible(true);
                     }
-                                        dispose();
+                    dispose();
                 }
 
             });    

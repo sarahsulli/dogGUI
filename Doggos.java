@@ -19,6 +19,7 @@ public class Doggos {
     private String corgie = "Corgie";   
     private String shihTzu = "Shih Tzu";      
     private String pomeranian = "Pomeranian";
+    private String chihuahua = "Chihuahua";
     private String havanse = "Havanse";
     private String shibaInu = "Shiba Inu";
     private String newfoundland = "Newfoundland";
@@ -37,6 +38,7 @@ public class Doggos {
         dogList.add(corgie);
         dogList.add(shihTzu);
         dogList.add(pomeranian);
+        dogList.add(chihuahua);
         dogList.add(havanse);
         dogList.add(shibaInu);
         dogList.add(newfoundland);
@@ -49,7 +51,7 @@ public class Doggos {
     public String findDog(){               
         Scores copy = new Scores();
         //copy.getHighestScore();
-        int index = copy.getHighestScore(); /**why this this static?*/
+        int index = copy.getHighestScore(); 
         String result;
         result = dogList.get(index); 
         return result;

@@ -30,7 +30,7 @@ public class GetDog extends JFrame{
      *put it in the constructor it shows but idk if it will show the correct dog winner
      *
      *
-     *Needs to make the copy of array right - returning null i think!!
+     *Needs to make the copy of array right - returning null i think
      */
 
     
@@ -51,16 +51,12 @@ public class GetDog extends JFrame{
     public GetDog() {
         //set frame title
         setTitle("Your Spirit Dog");
-        //set default close operation
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        //set bounds of the frame
         setBounds(100, 100, 550, 500);                           
-        //create object of JPanel
         contentPane = new JPanel();
 
-        //set border
+
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-        //set ContentPane
         setContentPane(contentPane);
         /**contentPane.setLayout(new FlowLayout());*/
         contentPane.setSize(new Dimension(600,200));
@@ -68,7 +64,7 @@ public class GetDog extends JFrame{
         
         Doggos dCopy = new Doggos();
         
-        JLabel intro = new JLabel("YOUR SPIRIT DOG IS...." + dCopy.findDog());// +findDog()
+        JLabel intro = new JLabel("YOUR SPIRIT DOG IS...." + dCopy.findDog());
         final JButton btnMenuFrame = new JButton("Retake Quiz"); 
         intro.setForeground(Color.BLACK);
         intro.setBounds(327, 195, 78, 39);
@@ -83,19 +79,14 @@ public class GetDog extends JFrame{
                 private Scores Scores;
                 public void actionPerformed(ActionEvent click)
                 {
-                    //get source of click
                     Object source = click.getSource();
-
-                    //restart
                     if(source == btnMenuFrame){
                         Menu frame = new Menu(); 
                         frame.setVisible(true);
                         
-                        Scores sCopy = new Scores();
-                                
-                        sCopy.resetScores(); /**do you need to reset scores?**/
+                        Scores sCopy = new Scores();                               
+                        sCopy.resetScores(); 
                     } 
-                    //set default close operation
                     dispose();
                 }
 

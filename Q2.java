@@ -17,50 +17,35 @@ import javax.swing.JRadioButton;
 import java.awt.event.*;
 import java.util.ArrayList;
 
-//create class and extend with JFrame
+
 public class Q2 extends JFrame
 {
-    //declare variable
     private JPanel contentPane;
     private Scores Scores;
     private JFrame theFrame;
-    //setting up radio buttons
 
     /**
      * Create the frame.
      */
     public Q2 ()//constructor 
     {
-
-        //set frame title
         setTitle("Question 2");
-        //set default close operation
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        //set bounds of the frame
         setBounds(100, 100, 550, 500);                           
-        //create object of JPanel
         contentPane = new JPanel();
 
-        //set border
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-        //set ContentPane
         setContentPane(contentPane);
         /**contentPane.setLayout(new FlowLayout());*/
         contentPane.setSize(new Dimension(600,200));
         contentPane.setBounds(80, 95, 78, 25);
 
-        //set Label in the frame
         JLabel intro = new JLabel("Question one");
-        //set foreground color to the label
         intro.setForeground(Color.BLACK);
-        //set font of that label
         intro.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18));
-        //set bound of the label
         intro.setBounds(327, 195, 78, 39);
-        //add label to the contentPane
         contentPane.add(intro);
 
-        //set button group
         ButtonGroup group = new ButtonGroup();
 
         final JRadioButton btn1 = new JRadioButton("+GR Q2");btn1.setSelected(false);       
@@ -79,7 +64,6 @@ public class Q2 extends JFrame
         contentPane.add(btn2);
         contentPane.add(btn3);
 
-        //create object of JButton and set label on it        
         final JButton btnNewFrame = new JButton("Next");
         final JButton btnBackFrame = new JButton("Back");
         btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
@@ -90,15 +74,11 @@ public class Q2 extends JFrame
         btnBackFrame.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent click)
                 {
-                    //get source of click
                     Object source = click.getSource();
-
-                    //back
                     if(source == btnBackFrame){
                         Q1 frame = new Q1(); 
                         frame.setVisible(true);
                     } 
-                    //set default close operation
                     dispose();
                 }
 
@@ -109,15 +89,11 @@ public class Q2 extends JFrame
                 private Scores Scores;
                 public void actionPerformed(ActionEvent click)
                 {
-                    //get source of click
                     Object source = click.getSource();
-                    //next 
                     if(source == btnNewFrame){
                         GetDog frame = new GetDog(); 
                         frame.setVisible(true);
                     }    
-
-                    //set default close operation
                     dispose();
                 }
 
@@ -128,13 +104,12 @@ public class Q2 extends JFrame
                 {
                     Object source = click.getSource();
                     Scores scr = new Scores();
-                    //adding points (making sure click on button and pressed next!!)
                     if((source == btn1) /**&& (source == btnNewFrame)*/){
                         scr.addPointD0();
                         GetDog frame = new GetDog(); 
                         frame.setVisible(true);
                     }
-                                        dispose();
+                    dispose();
                 }
 
             });
@@ -144,13 +119,12 @@ public class Q2 extends JFrame
                 {
                     Object source = click.getSource();
                     Scores scr = new Scores();
-                    //adding points (making sure click on button and pressed next!!)
                     if((source == btn2)/**&& (source == btnNewFrame)*/){
                         scr.addPointD1();
                         GetDog frame = new GetDog(); 
                         frame.setVisible(true);
                     }
-                                        dispose();
+                    dispose();
                 }
 
             });
@@ -160,13 +134,12 @@ public class Q2 extends JFrame
                 {
                     Object source = click.getSource();
                     Scores scr = new Scores();
-                    //adding points (making sure click on button and pressed next!!)
                     if((source == btn3) /**&& (source == btnNewFrame)*/){
                         scr.addPointD2();
                         GetDog frame = new GetDog(); 
                         frame.setVisible(true);
                     }
-                                        dispose();
+                    dispose();
                 }
 
             });   
