@@ -56,8 +56,9 @@ public class Menu extends JFrame
         contentPane.setBounds(80, 95, 78, 25);
 
         //set Label in the frame
-        JLabel intro = new JLabel("This application helps determine what breed of dog you should get.");
-        JLabel intro2 = new JLabel("another line of text");
+        JLabel intro = new JLabel("<html><b>This application helps determine what breed of dog you should get.</b>"
+        +"<br> Press 'Next' to start! </b></html>");
+
         //set foreground color to the label
         intro.setForeground(Color.BLUE);
         //set font of that label
@@ -66,7 +67,7 @@ public class Menu extends JFrame
         intro.setBounds(327, 195, 78, 39);
         //add label to the contentPane 
         contentPane.add(intro);
-        contentPane.add(intro2);
+
 
         //create object of JButton and set label on it
         JButton btnNewFrame = new JButton("Next");

@@ -63,8 +63,8 @@ public class GetDog extends JFrame{
         contentPane.setBounds(80, 95, 78, 25);
         
         Doggos dCopy = new Doggos();
-        
-        JLabel intro = new JLabel("YOUR SPIRIT DOG IS...." + dCopy.findDog());
+        Scores sCopy = new Scores();
+        JLabel intro = new JLabel("YOUR SPIRIT DOG IS...." + dCopy.findDog()+ " "+ sCopy.getHighestScore());
         
         intro.setForeground(Color.BLACK);
         intro.setBounds(327, 195, 78, 39);
@@ -80,7 +80,7 @@ public class GetDog extends JFrame{
         //add actionListener
         btnMenuFrame.addActionListener(new ActionListener()        
             {
-                private Scores Scores;
+                Scores scr = new Scores();
                 public void actionPerformed(ActionEvent click)
                 {
                     Object source = click.getSource();
@@ -88,7 +88,6 @@ public class GetDog extends JFrame{
                         Menu frame = new Menu(); 
                         frame.setVisible(true);
                         
-                        Scores sCopy = new Scores();                               
                         sCopy.resetScores(); 
                     } 
                     dispose();

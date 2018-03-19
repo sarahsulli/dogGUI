@@ -7,7 +7,7 @@
  */
 import java.util.ArrayList;
 public class Doggos {
-    private String golden = "Golden Retreiver";
+    private String golden = "Golden Retriever";
     private String lab = "Lab";
     private String germanSheperd = "German Shepherd";
     private String poodle = "Poodle";
@@ -15,11 +15,11 @@ public class Doggos {
     private String huskie = "Huskie";
     private String greatDane = "Great Dane";
     private String borderCollie = "Boarder Collie";
-    private String corgie = "Corgie";   
+    private String corgi = "Corgi";   
     private String maltese = "Maltese";      
     private String pomeranian = "Pomeranian";
     private String chihuahua = "Chihuahua";
-    private String havanse = "Havanse";
+    private String havanese = "Havanese";
     private String shibaInu = "Shiba Inu";
     private String newfoundland = "Newfoundland";
     
@@ -34,11 +34,11 @@ public class Doggos {
         dogList.add(huskie);
         dogList.add(greatDane);
         dogList.add(borderCollie);
-        dogList.add(corgie);
+        dogList.add(corgi);
         dogList.add(maltese);
         dogList.add(pomeranian);
         dogList.add(chihuahua);
-        dogList.add(havanse);
+        dogList.add(havanese);
         dogList.add(shibaInu);
         dogList.add(newfoundland);
     }

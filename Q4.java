@@ -18,7 +18,7 @@ import javax.swing.JRadioButton;
 import java.awt.event.*;
 import java.util.ArrayList;
 
-public class Q3 extends JFrame
+public class Q4 extends JFrame
 {
     private JPanel contentPane;
     private Scores Scores;
@@ -27,10 +27,10 @@ public class Q3 extends JFrame
     /**
      * Create the frame.
      */
-    public Q3()//constructor 
+    public Q4()//constructor 
     {
         //set frame title
-        setTitle("Question 3");
+        setTitle("Question 4");
         //set default close operation
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         //set bounds of the frame
@@ -47,7 +47,7 @@ public class Q3 extends JFrame
         contentPane.setBounds(80, 95, 78, 25);
 
         //set Label in the frame
-        JLabel intro = new JLabel("What kind of house do you have?");
+        JLabel intro = new JLabel("Do you mind if the dog sheds?");
         //set foreground color to the label
         intro.setForeground(Color.BLACK);
         //set font of that label
@@ -60,21 +60,16 @@ public class Q3 extends JFrame
         //set button group
         ButtonGroup group = new ButtonGroup();
 
-        final JRadioButton btn1 = new JRadioButton("Apartment with no yard");btn1.setSelected(false);       
-        final JRadioButton btn2 = new JRadioButton("Medium house or apartment with small yard");btn2.setSelected(false);
-        final JRadioButton btn3 = new JRadioButton("House with yard");btn3.setSelected(false);       
+        final JRadioButton btn1 = new JRadioButton("Yes");btn1.setSelected(false);       
+        final JRadioButton btn2 = new JRadioButton("No");btn2.setSelected(false);     
         btn1.setForeground(Color.BLACK);
         btn2.setForeground(Color.BLACK);
-        btn3.setForeground(Color.BLACK);
         btn1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
         btn2.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
-        btn3.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
         group.add(btn1);
-        group.add(btn2); 
-        group.add(btn3);                
+        group.add(btn2);                 
         contentPane.add(btn1);
         contentPane.add(btn2);
-        contentPane.add(btn3);
 
         //create object of JButton and set label on it        
         final JButton btnNewFrame = new JButton("Next");
@@ -94,7 +89,7 @@ public class Q3 extends JFrame
                     Object source = click.getSource();
                     //next 
                     if(source == btnNewFrame){
-                        Q4 frame = new Q4(); 
+                        Q5 frame = new Q5(); 
                         frame.setVisible(true);
                     }    
 
@@ -118,7 +113,7 @@ public class Q3 extends JFrame
                 }
 
             });
-        //apartment
+        //dog that doesnt shed
         btn1.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent click)
                 {
@@ -127,20 +122,18 @@ public class Q3 extends JFrame
                     //adding points (making sure click on button and pressed next!!)
                     if(source == btn1){
                         scr.addPointD3();
-                        scr.addPointD4();
-                        scr.addPointD9(); 
+                        scr.addPointD9();
                         scr.addPointD10();
-                        scr.addPointD11();
                         scr.addPointD12();
-                        scr.addPointD13();
-                        Q4 frame = new Q4(); 
+
+                        Q5 frame = new Q5(); 
                         frame.setVisible(true);
                     }
                     dispose();
                 }
 
             });
-        //small yard/ house
+        //dog can shed
         btn2.addActionListener(new ActionListener(){
 
                 public void actionPerformed(ActionEvent click)
@@ -151,56 +144,24 @@ public class Q3 extends JFrame
                     if(source == btn2){                        
                         scr.addPointD0();
                         scr.addPointD1();
+                        scr.addPointD2();
+                        scr.addPointD4();                       
+                        scr.addPointD5();
                         scr.addPointD6();
-                        scr.addPointD8();                       
+                        scr.addPointD7();
+                        scr.addPointD8();
+                        scr.addPointD11();
                         scr.addPointD13();
                         scr.addPointD14();
                         
-                        scr.addPointD3();
-                        scr.addPointD4();
-                        scr.addPointD9(); 
-                        scr.addPointD10();
-                        scr.addPointD11();
-                        scr.addPointD12();
-                        Q4 frame = new Q4(); 
+                        Q5 frame = new Q5(); 
                         frame.setVisible(true);
                     }
                     dispose();
                 }
 
             });
-        //house + big yard
-        btn3.addActionListener(new ActionListener(){
-                public void actionPerformed(ActionEvent click)
-                {
-                    Object source = click.getSource();
-                    Scores scr = new Scores();
-                    //adding points (making sure click on button and pressed next!!)
-                    if(source == btn3){
-                        scr.addPointD0();
-                        scr.addPointD1();
-                        scr.addPointD2();
-                        scr.addPointD5();
-                        scr.addPointD7();
-                        
-                        scr.addPointD6();
-                        scr.addPointD8();                       
-                        scr.addPointD13();
-                        scr.addPointD14();
-                        
-                        scr.addPointD3();
-                        scr.addPointD4();
-                        scr.addPointD9(); 
-                        scr.addPointD10();
-                        scr.addPointD11();
-                        scr.addPointD12();
-                        Q4 frame = new Q4(); 
-                        frame.setVisible(true);
-                    }
-                    dispose();
-                }
-
-            });    
+   
     } 
 
 }

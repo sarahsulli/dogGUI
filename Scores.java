@@ -15,11 +15,11 @@ public class Scores {
     int huskie = 0;         //5
     int greatDane = 0;      //6
     int borderCollie = 0;   //7
-    int corgie = 0;         //8
+    int corgi = 0;         //8
     int maltese = 0;        //9 
     int pomeranian = 0;     //10
     int chihuahua = 0;      //11
-    int havanse = 0;        //12
+    int havanese = 0;        //12
     int shibaInu = 0;       //13
     int newfoundland = 0;   //14 
 
@@ -34,11 +34,11 @@ public class Scores {
         scoreList.add(huskie);
         scoreList.add(greatDane);
         scoreList.add(borderCollie);
-        scoreList.add(corgie);
+        scoreList.add(corgi);
         scoreList.add(maltese);
         scoreList.add(pomeranian);
         scoreList.add(chihuahua);        
-        scoreList.add(havanse);
+        scoreList.add(havanese);
         scoreList.add(shibaInu);
         scoreList.add(newfoundland);
     }
@@ -136,6 +136,7 @@ public class Scores {
         for(int i=0; i<scoreList.size(); i++){
             if (scoreList.get(i) > highScore) {
                 highDogIndex = i;
+                highScore = scoreList.get(i);
             }
         } 
         return highDogIndex;
