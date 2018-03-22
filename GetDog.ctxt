@@ -1,10 +1,9 @@
 #BlueJ class context
-comment0.target=GetDog
-comment1.params=
-comment1.target=GetDog()
-comment1.text=public\ String\ findDog(){\n\ \ \ \ Doggos\ \=\ new\ Doggos();\n\ \ \ \ Doggos.getList\ \=\ (ArrayList<String>)theDogs.clone();\n\n\ \ \ \ ArrayList<String>\ dogList2\ \=\ Doggos.getList();\n\ \ \ \ int\ index\ \=\ Scores.highestScore();\n\ \ \ \ String\ result;\n\ \ \ \ result\ \=\ Doggos.getList().get(index);\ \n\ \ \ \ return\ result;\n}
+comment0.params=
+comment0.target=GetDog()
+comment0.text=public\ String\ findDog(){\r\n\ \ \ \ Doggos\ \=\ new\ Doggos();\r\n\ \ \ \ Doggos.getList\ \=\ (ArrayList<String>)theDogs.clone();\r\n\r\n\ \ \ \ ArrayList<String>\ dogList2\ \=\ Doggos.getList();\r\n\ \ \ \ int\ index\ \=\ Scores.highestScore();\r\n\ \ \ \ String\ result;\r\n\ \ \ \ result\ \=\ Doggos.getList().get(index);\ \r\n\ \ \ \ return\ result;\r\n}
+comment1.params=click
+comment1.target=void\ actionPerformed(java.awt.event.ActionEvent)
 comment2.params=click
 comment2.target=void\ actionPerformed(java.awt.event.ActionEvent)
-comment3.params=click
-comment3.target=void\ actionPerformed(java.awt.event.ActionEvent)
-numComments=4
+numComments=3

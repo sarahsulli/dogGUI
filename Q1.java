@@ -2,7 +2,7 @@ import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+//import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -18,11 +18,14 @@ import javax.swing.JRadioButton;
 import java.awt.event.*;
 import java.util.ArrayList;
 
+import java.awt.*;
+import javax.swing.plaf.metal.*;
+import javax.swing.*;
+
 public class Q1 extends JFrame
 {
     private JPanel contentPane;
-    private Scores Scores;
-    private JFrame theFrame;
+    //private JFrame theFrame;
 
     /**
      * Create the frame.
@@ -36,13 +39,12 @@ public class Q1 extends JFrame
         //set bounds of the frame
         setBounds(100, 100, 850, 500);                           
         //create object of JPanel
-        contentPane = new JPanel();
+        contentPane = new JPanel(new GridLayout(10,0));
 
         //set border
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         //set ContentPane
         setContentPane(contentPane);
-        /**contentPane.setLayout(new FlowLayout());*/
         contentPane.setSize(new Dimension(600,200));
         contentPane.setBounds(80, 95, 78, 25);
 
@@ -71,7 +73,7 @@ public class Q1 extends JFrame
         btn3.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
         group.add(btn1);
         group.add(btn2); 
-        group.add(btn3);                
+        group.add(btn3);          
         contentPane.add(btn1);
         contentPane.add(btn2);
         contentPane.add(btn3);

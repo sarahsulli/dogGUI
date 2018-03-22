@@ -1,8 +1,9 @@
 #BlueJ class context
-comment0.target=Q2
-comment1.params=
-comment1.target=Q2()
-comment1.text=\n\ Create\ the\ frame.\n
+comment0.params=
+comment0.target=Q2()
+comment0.text=\r\n\ Create\ the\ frame.\r\n
+comment1.params=click
+comment1.target=void\ actionPerformed(java.awt.event.ActionEvent)
 comment2.params=click
 comment2.target=void\ actionPerformed(java.awt.event.ActionEvent)
 comment3.params=click
@@ -13,6 +14,4 @@ comment5.params=click
 comment5.target=void\ actionPerformed(java.awt.event.ActionEvent)
 comment6.params=click
 comment6.target=void\ actionPerformed(java.awt.event.ActionEvent)
-comment7.params=click
-comment7.target=void\ actionPerformed(java.awt.event.ActionEvent)
-numComments=8
+numComments=7

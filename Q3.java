@@ -36,7 +36,7 @@ public class Q3 extends JFrame
         //set bounds of the frame
         setBounds(100, 100, 850, 500);                           
         //create object of JPanel
-        contentPane = new JPanel();
+        contentPane = new JPanel(new GridLayout(10,0));
       
 
 

@@ -13,6 +13,9 @@ import java.awt.FlowLayout;
 import javax.swing.ImageIcon;
 import javax.swing.AbstractButton;
 import java.awt.event.*;
+import java.awt.*;
+import javax.swing.plaf.metal.*;
+import javax.swing.*;
 
 //create class and extend with JFrame
 public class Menu extends JFrame 
@@ -44,15 +47,15 @@ public class Menu extends JFrame
         //set bounds of the frame
         setBounds(100, 100, 850, 500);                           
         //create object of JPanel
-        contentPane = new JPanel();
+        contentPane = new JPanel(new GridLayout(10,0));
 
         //set border
-        contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+        contentPane.setBorder(new EmptyBorder(5, 5, 50, 50));
         //set ContentPane
         setContentPane(contentPane);
         //contentPane.setLayout(new FlowLayout());
         contentPane.setSize(new Dimension(600,200));
-
+        contentPane.setBackground(new Color(233,193,255));
         contentPane.setBounds(80, 95, 78, 25);
 
         //set Label in the frame
@@ -60,11 +63,11 @@ public class Menu extends JFrame
         +"<br> Press 'Next' to start! </b></html>");
 
         //set foreground color to the label
-        intro.setForeground(Color.BLUE);
+        intro.setForeground(Color.WHITE);
         //set font of that label
-        intro.setFont(new Font("Times New Roman", Font.BOLD, 18));
+        intro.setFont(new Font("Times New Roman", Font.BOLD, 24));
         //set bound of the label
-        intro.setBounds(327, 195, 78, 39);
+        intro.setBounds(327, 195, 178, 39);
         //add label to the contentPane 
         contentPane.add(intro);
 
@@ -75,13 +78,13 @@ public class Menu extends JFrame
         JButton btnQuitFrame = new JButton("Quit");
         btnQuitFrame.setForeground(Color.RED);
         //set font of the Button
-        btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
-        btnInfoFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
-        btnQuitFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
+        btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 20));
+        btnInfoFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 20));
+        btnQuitFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 20));
         //set bounds of the Button
-        btnNewFrame.setBounds(280, 195, 78, 25);
-        btnInfoFrame.setBounds(280, 195, 78, 25);     
-        btnQuitFrame.setBounds(280, 195, 78, 25);        
+        btnNewFrame.setBounds(380, 295, 178, 125);
+        btnInfoFrame.setBounds(380, 295, 178, 125);     
+        btnQuitFrame.setBounds(380, 295, 178, 125);        
         //add Button into contentPane
         contentPane.add(btnNewFrame);
         contentPane.add(btnInfoFrame);

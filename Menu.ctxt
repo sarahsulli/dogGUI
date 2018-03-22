@@ -1,14 +1,13 @@
 #BlueJ class context
-comment0.target=Menu
-comment1.params=path
-comment1.target=javax.swing.ImageIcon\ createImageIcon(java.lang.String)
-comment2.params=
-comment2.target=Menu()
-comment2.text=\n\ Create\ the\ frame.\n
+comment0.params=path
+comment0.target=javax.swing.ImageIcon\ createImageIcon(java.lang.String)
+comment1.params=
+comment1.target=Menu()
+comment1.text=\r\n\ Create\ the\ frame.\r\n
+comment2.params=click
+comment2.target=void\ actionPerformed(java.awt.event.ActionEvent)
 comment3.params=click
 comment3.target=void\ actionPerformed(java.awt.event.ActionEvent)
 comment4.params=click
 comment4.target=void\ actionPerformed(java.awt.event.ActionEvent)
-comment5.params=click
-comment5.target=void\ actionPerformed(java.awt.event.ActionEvent)
-numComments=6
+numComments=5

@@ -32,7 +32,7 @@ public class Q2 extends JFrame
         setTitle("Question 2");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setBounds(100, 100, 850, 500);                           
-        contentPane = new JPanel();
+        contentPane = new JPanel(new GridLayout(10,0));
 
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);

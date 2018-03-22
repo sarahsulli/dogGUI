@@ -50,7 +50,6 @@ public class GetDog extends JFrame{
 
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
-        contentPane.setLayout(new FlowLayout());
         contentPane.setSize(new Dimension(600,200));
         contentPane.setBounds(80, 95, 78, 25);
 
@@ -86,7 +85,7 @@ public class GetDog extends JFrame{
                         DogInfo frame = new DogInfo(); 
                         frame.setVisible(true);
 
-                        sCopy.resetScores(); 
+                        scr.resetScores(); 
                     } 
                     dispose();
                 }

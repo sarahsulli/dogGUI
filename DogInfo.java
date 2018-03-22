@@ -31,11 +31,10 @@ public class DogInfo extends JFrame
         setTitle("Breed Info");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setBounds(100, 100, 850, 500);                           
-        contentPane = new JPanel();
+        contentPane = new JPanel(new GridLayout(10,0));
 
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
-        contentPane.setLayout(new FlowLayout());
         contentPane.setSize(new Dimension(600,200));
         contentPane.setBounds(80, 95, 78, 25);
 
