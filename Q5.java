@@ -35,7 +35,7 @@ public class Q5 extends JFrame
         //set default close operation
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         //set bounds of the frame
-        setBounds(100, 100, 550, 500);                           
+        setBounds(100, 100, 850, 500);                           
         //create object of JPanel
         contentPane = new JPanel();
 
@@ -99,7 +99,7 @@ public class Q5 extends JFrame
                     Object source = click.getSource();
                     //next 
                     if(source == btnNewFrame){
-                        GetDog frame = new GetDog(); 
+                        Q6 frame = new Q6(); 
                         frame.setVisible(true);
                     }    
 
@@ -134,7 +134,7 @@ public class Q5 extends JFrame
                         scr.addPointD1();
                         scr.addPointD3();
                         scr.addPointD14();
-                        GetDog frame = new GetDog();
+                        Q6 frame = new Q6();
                         frame.setVisible(true);
                     }
                     dispose();
@@ -153,7 +153,7 @@ public class Q5 extends JFrame
                         scr.addPointD8();
                         scr.addPointD9();
                         scr.addPointD10();
-                        GetDog frame = new GetDog(); 
+                        Q6 frame = new Q6(); 
                         frame.setVisible(true);
                     }
 
@@ -177,7 +177,7 @@ public class Q5 extends JFrame
                         scr.addPointD8();
                         scr.addPointD9();
                         scr.addPointD10();
-                        GetDog frame = new GetDog(); 
+                        Q6 frame = new Q6(); 
                         frame.setVisible(true);
                     }
 
@@ -192,7 +192,7 @@ public class Q5 extends JFrame
                     Scores scr = new Scores();
                     if (source==btn4) {  
 
-                        GetDog frame = new GetDog(); 
+                        Q6 frame = new Q6(); 
                         frame.setVisible(true);
                     }
 

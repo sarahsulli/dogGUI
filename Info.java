@@ -30,12 +30,12 @@ public class Info extends JFrame
     {
         setTitle("Info");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        setBounds(100, 100, 550, 500);                           
+        setBounds(100, 100, 850, 500);                           
         contentPane = new JPanel();
 
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
-        /**contentPane.setLayout(new FlowLayout());*/
+        contentPane.setLayout(new FlowLayout());
         contentPane.setSize(new Dimension(600,200));
         contentPane.setBounds(80, 95, 78, 25);
 
@@ -50,13 +50,13 @@ public class Info extends JFrame
         contentPane.add(intro);
 
         //create object of JButton and set label on it        
-        final JButton btnBackFrame = new JButton("Take Me Back");
+        final JButton btnBackFrame = new JButton("Take Me Back!");
         final JButton btnNewFrame = new JButton("Start Quiz!");
         btnBackFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
         btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
-        contentPane.add(btnBackFrame);
         contentPane.add(btnNewFrame);
-
+        contentPane.add(btnBackFrame);
+        
         btnBackFrame.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent click)
                 {

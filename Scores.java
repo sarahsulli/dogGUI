@@ -141,5 +141,30 @@ public class Scores {
         } 
         return highDogIndex;
     }
+    public int secondHighScore(){
+        int highScore=0;
+        int highDogIndex =0;
+        scoreList.set(getHighestScore(), 0);
+        for(int i=0; i<scoreList.size(); i++){
+            if (scoreList.get(i) > highScore) {
+                highDogIndex = i;
+                highScore = scoreList.get(i);
+            }
+        } 
+        return highDogIndex;
+    }
+    public int thirdHighSchore(){
+        int highScore=0;
+        int highDogIndex =0;
+        scoreList.set(getHighestScore(), 0);
+        scoreList.set(secondHighScore(), 0);
+        for(int i=0; i<scoreList.size(); i++){
+            if (scoreList.get(i) > highScore) {
+                highDogIndex = i;
+                highScore = scoreList.get(i);
+            }
+        } 
+        return highDogIndex;
+    }
 
 }

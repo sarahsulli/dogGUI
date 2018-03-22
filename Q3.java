@@ -34,17 +34,17 @@ public class Q3 extends JFrame
         //set default close operation
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         //set bounds of the frame
-        setBounds(100, 100, 550, 500);                           
+        setBounds(100, 100, 850, 500);                           
         //create object of JPanel
         contentPane = new JPanel();
+      
 
-        //set border
+
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-        //set ContentPane
         setContentPane(contentPane);
-        /**contentPane.setLayout(new FlowLayout());*/
+        contentPane.setLayout(new FlowLayout());
         contentPane.setSize(new Dimension(600,200));
-        contentPane.setBounds(80, 95, 78, 25);
+        contentPane.setBounds(100, 95, 78, 25);
 
         //set Label in the frame
         JLabel intro = new JLabel("What kind of house do you have?");

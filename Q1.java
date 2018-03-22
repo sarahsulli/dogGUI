@@ -34,7 +34,7 @@ public class Q1 extends JFrame
         //set default close operation
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         //set bounds of the frame
-        setBounds(100, 100, 550, 500);                           
+        setBounds(100, 100, 850, 500);                           
         //create object of JPanel
         contentPane = new JPanel();
 

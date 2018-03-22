@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Q6
+comment1.params=
+comment1.target=Q6()
+comment1.text=\n\ Create\ the\ frame.\n
+comment2.params=click
+comment2.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment3.params=click
+comment3.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment4.params=click
+comment4.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment5.params=click
+comment5.target=void\ actionPerformed(java.awt.event.ActionEvent)
+numComments=6

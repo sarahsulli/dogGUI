@@ -31,7 +31,7 @@ public class Q2 extends JFrame
     {
         setTitle("Question 2");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        setBounds(100, 100, 550, 500);                           
+        setBounds(100, 100, 850, 500);                           
         contentPane = new JPanel();
 
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -114,7 +114,6 @@ public class Q2 extends JFrame
                     Scores scr = new Scores();
                     if(source == btn1){
                         scr.addPointD9();
-                        scr.addPointD10();
                         scr.addPointD11();
                         scr.addPointD12();
                         Q3 frame = new Q3(); 
@@ -175,6 +174,7 @@ public class Q2 extends JFrame
                     Scores scr = new Scores();
                     if(source == btn4){
                         scr.addPointD5();
+                        scr.addPointD10();                       
                         scr.addPointD12();
                         scr.addPointD13();
                         Q3 frame = new Q3(); 
