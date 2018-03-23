@@ -62,7 +62,7 @@ public class Q10 extends JFrame
 
         final JRadioButton btn1 = new JRadioButton("Very important");btn1.setSelected(false);       
         final JRadioButton btn2 = new JRadioButton("Not super important");btn2.setSelected(false);  
-        final JRadioButton btn3 = new JRadioButton("Not important");btn1.setSelected(false);
+        final JRadioButton btn3 = new JRadioButton("Not important");btn3.setSelected(false);
         btn1.setForeground(Color.BLACK);
         btn2.setForeground(Color.BLACK);
         btn3.setForeground(Color.BLACK);
@@ -94,7 +94,7 @@ public class Q10 extends JFrame
                     Object source = click.getSource();
                     //next 
                     if(source == btnNewFrame){
-                        GetDog frame = new GetDog(); 
+                        Q11 frame = new Q11(); 
                         frame.setVisible(true);
                     }    
 
@@ -126,6 +126,12 @@ public class Q10 extends JFrame
                     Scores scr = new Scores();
                     //adding points (making sure click on button and pressed next!!)
                     if(source == btn1){
+                        scr.addPointD3();// +4 pt
+                        scr.addPointD9();
+                        scr.addPointD12();
+                        scr.addPointD3();
+                        scr.addPointD9();
+                        scr.addPointD12();
                         scr.addPointD3();
                         scr.addPointD9();
                         scr.addPointD12();
@@ -134,9 +140,7 @@ public class Q10 extends JFrame
                         scr.addPointD12();
 
 
-
-
-                        GetDog frame = new GetDog(); 
+                        Q11 frame = new Q11(); 
                         frame.setVisible(true);
                     }
                     dispose();
@@ -152,22 +156,22 @@ public class Q10 extends JFrame
                     Scores scr = new Scores();
                     //adding points (making sure click on button and pressed next!!)
                     if(source == btn2){                        
+                        scr.addPointD3(); //+2
+                        scr.addPointD9();
+                        scr.addPointD12();
                         scr.addPointD3();
                         scr.addPointD9();
                         scr.addPointD12();
-
-                      
           
-
                         
-                        GetDog frame = new GetDog(); 
+                        Q11 frame = new Q11(); 
                         frame.setVisible(true);
                     }
                     dispose();
                 }
 
             });
-                   btn3.addActionListener(new ActionListener(){
+        btn3.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent click)
                 {
                     Object source = click.getSource();
@@ -175,15 +179,14 @@ public class Q10 extends JFrame
                     //adding points (making sure click on button and pressed next!!)
                     if(source == btn3){
 
-
-                        GetDog frame = new GetDog(); 
+                        Q11 frame = new Q11(); 
                         frame.setVisible(true);
                     }
                     dispose();
                 }
 
             });
-   
+
     } 
 
 }

@@ -125,6 +125,16 @@ public class Q4 extends JFrame
                         scr.addPointD9();
                         scr.addPointD10();
                         scr.addPointD12();
+                        
+                        scr.addPointD3();
+                        scr.addPointD9();
+                        scr.addPointD10();
+                        scr.addPointD12();
+                        
+                        scr.addPointD3();
+                        scr.addPointD9();
+                        scr.addPointD10();
+                        scr.addPointD12();
 
                         Q5 frame = new Q5(); 
                         frame.setVisible(true);

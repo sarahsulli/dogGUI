@@ -48,7 +48,7 @@ public class Scores {
     }    
 
     public ArrayList<Integer> resetScores(){
-        for(int i=0; i < scoreList.size(); i++){
+        for(int i=0; i < 14; i++){
             scoreList.set(i , 0);
         }
         return scoreList;
@@ -131,14 +131,25 @@ public class Scores {
 
     public int getHighestScore(){       
         int highScore=0;
-        int highDogIndex=0; 
-
+        int startHighDogIndex=0; 
+        int highDogIndex =0;
+        ArrayList<Integer> topScoreTie = new ArrayList<Integer>();
+        //finds highest score
         for(int i=0; i<scoreList.size(); i++){
-            if (scoreList.get(i) > highScore) {
-                highDogIndex = i;
+            if (scoreList.get(i) > highScore) {               
+                startHighDogIndex = i; 
                 highScore = scoreList.get(i);
-            }
+            }            
         } 
+        //adds index of highest score ties to an array
+        //if tie will randomly pick winner by randomly picking i-val in tie arraylist
+        for(int i=0; i<scoreList.size(); i++){
+            if ((scoreList.get(i) == highScore)) {
+                topScoreTie.add(i);
+            }            
+        } 
+        highDogIndex = topScoreTie.get((int)(Math.random() * topScoreTie.size()));
+        
         return highDogIndex;
     }
     public int secondHighScore(){

@@ -7,7 +7,6 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import java.awt.Dimension;
 import javax.swing.border.EmptyBorder;
@@ -19,7 +18,7 @@ import javax.swing.JRadioButton;
 import java.awt.event.*;
 import java.util.ArrayList;
 
-public class Q5 extends JFrame
+public class Q11 extends JFrame
 {
     private JPanel contentPane;
     private Scores Scores;
@@ -28,10 +27,10 @@ public class Q5 extends JFrame
     /**
      * Create the frame.
      */
-    public Q5()//constructor 
+    public Q11()//constructor 
     {
         //set frame title
-        setTitle("Question 5");
+        setTitle("Question 11");
         //set default close operation
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         //set bounds of the frame
@@ -41,13 +40,14 @@ public class Q5 extends JFrame
 
         //set border
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-        contentPane.setBackground(new Color(233,193,255));
+        //set ContentPane
         setContentPane(contentPane);
+        contentPane.setBackground(new Color(233,193,255));
         contentPane.setSize(new Dimension(600,200));
         contentPane.setBounds(80, 95, 78, 25);
 
         //set Label in the frame
-        JLabel intro = new JLabel("Do you live with young children or seniors?");
+        JLabel intro = new JLabel("Do you want a common dog or a unique breed?");
         //set foreground color to the label
         intro.setForeground(Color.BLACK);
         //set font of that label
@@ -59,26 +59,20 @@ public class Q5 extends JFrame
 
         //set button group
         ButtonGroup group = new ButtonGroup();
-        final JRadioButton btn1 = new JRadioButton("Children");btn1.setSelected(false); 
-        final JRadioButton btn2 = new JRadioButton("Seniors");btn2.setSelected(false);    
-        final JRadioButton btn3 = new JRadioButton("Children and Seniors");btn3.setSelected(false); 
-        final JRadioButton btn4 = new JRadioButton("None");btn4.setSelected(false);     
+
+        final JRadioButton btn1 = new JRadioButton("I don't care");btn1.setSelected(false);       
+        final JRadioButton btn2 = new JRadioButton("Unique!");btn2.setSelected(false);  
         btn1.setForeground(Color.BLACK);
         btn2.setForeground(Color.BLACK);
-        btn3.setForeground(Color.BLACK);    
-        btn4.setForeground(Color.BLACK);
+
         btn1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
         btn2.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
-        btn3.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
-        btn4.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
+
         group.add(btn1);
-        group.add(btn2);     
-        group.add(btn3);                 
-        group.add(btn4);                 
+        group.add(btn2);    
+
         contentPane.add(btn1);
         contentPane.add(btn2);
-        contentPane.add(btn3);
-        contentPane.add(btn4);
 
         //create object of JButton and set label on it        
         final JButton btnNewFrame = new JButton("Next");
@@ -98,7 +92,7 @@ public class Q5 extends JFrame
                     Object source = click.getSource();
                     //next 
                     if(source == btnNewFrame){
-                        Q6 frame = new Q6(); 
+                        GetDog frame = new GetDog(); 
                         frame.setVisible(true);
                     }    
 
@@ -122,83 +116,66 @@ public class Q5 extends JFrame
                 }
 
             });
-        //kids
+
         btn1.addActionListener(new ActionListener(){
-
-                public void actionPerformed(ActionEvent event) {
-                    JRadioButton source = (JRadioButton) event.getSource();
+                public void actionPerformed(ActionEvent click)
+                {
+                    Object source = click.getSource();
                     Scores scr = new Scores();
-                    if (source==btn1) {
-                        scr.addPointD0();
-                        scr.addPointD1();
-                        scr.addPointD3();
-                        scr.addPointD14();
-                        Q6 frame = new Q6();
+                    //adding points (making sure click on button and pressed next!!)
+                    if(source == btn1){
+                        GetDog frame = new GetDog(); 
                         frame.setVisible(true);
                     }
                     dispose();
                 }
 
             });
-        //seinors
+
         btn2.addActionListener(new ActionListener(){
-                public void actionPerformed(ActionEvent event) {
-                    JRadioButton source = (JRadioButton) event.getSource();
+
+                public void actionPerformed(ActionEvent click)
+                {
+                    Object source = click.getSource();
                     Scores scr = new Scores();
-                    if (source==btn2) {  
-                        scr.addPointD3();
-                        scr.addPointD4();  
-                        scr.addPointD3();
-                        scr.addPointD8();
-                        scr.addPointD9();
-                        scr.addPointD10();
-                        Q6 frame = new Q6(); 
+                    //adding points (making sure click on button and pressed next!!)
+                    if(source == btn2){ 
+                        scr.addPointD6();//+6 pt
+                        scr.addPointD12();
+                        scr.addPointD13();
+                        scr.addPointD14();
+                        scr.addPointD6();
+                        scr.addPointD12();
+                        scr.addPointD13();
+                        scr.addPointD14();
+                        scr.addPointD6();
+                        scr.addPointD12();
+                        scr.addPointD13();
+                        scr.addPointD14();
+                        scr.addPointD6();
+                        scr.addPointD12();
+                        scr.addPointD13();
+                        scr.addPointD14();
+                        scr.addPointD6();
+                        scr.addPointD12();
+                        scr.addPointD13();
+                        scr.addPointD14();
+                        scr.addPointD6();
+                        scr.addPointD12();
+                        scr.addPointD13();
+                        scr.addPointD14();
+                        
+                        
+
+                        
+                        
+
+                        GetDog frame = new GetDog(); 
                         frame.setVisible(true);
                     }
-
                     dispose();
                 }
 
             });
-        //both
-        btn3.addActionListener(new ActionListener(){
-                public void actionPerformed(ActionEvent event) {
-                    JRadioButton source = (JRadioButton) event.getSource();
-                    Scores scr = new Scores();
-                    if (source==btn3) {  
-                        scr.addPointD0();
-                        scr.addPointD1();
-                        scr.addPointD3();
-                        scr.addPointD14();
-                        scr.addPointD3();
-                        scr.addPointD4();  
-                        scr.addPointD3();
-                        scr.addPointD8();
-                        scr.addPointD9();
-                        scr.addPointD10();
-                        Q6 frame = new Q6(); 
-                        frame.setVisible(true);
-                    }
-
-                    dispose();
-                }
-
-            });    
-        //both
-        btn4.addActionListener(new ActionListener(){
-                public void actionPerformed(ActionEvent event) {
-                    JRadioButton source = (JRadioButton) event.getSource();
-                    Scores scr = new Scores();
-                    if (source==btn4) {  
-
-                        Q6 frame = new Q6(); 
-                        frame.setVisible(true);
-                    }
-
-                    dispose();
-                }
-
-            });   
-    } 
-
+    }
 }

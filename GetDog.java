@@ -59,7 +59,7 @@ public class GetDog extends JFrame{
         JLabel intro = new JLabel("YOUR SPIRIT DOG IS A " + dCopy.findDog().toUpperCase());        
         JLabel dogInfoText = new JLabel(theInfo);       
         JLabel other = new JLabel("<html><b> Other good dogs for you include: </b><br>" 
-                + dCopy.find2Dog() + " and " +dCopy.find3Dog() + "<html>");
+                + dCopy.find2Dog() + " and " +dCopy.find3Dog() +"<html>");
 
 
         ImageIcon icon = new ImageIcon(dogPic);

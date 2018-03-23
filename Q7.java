@@ -60,7 +60,7 @@ public class Q7 extends JFrame
         //set button group
         ButtonGroup group = new ButtonGroup();
 
-        final JRadioButton btn1 = new JRadioButton("Teach my dog only basics");btn1.setSelected(false);       
+        final JRadioButton btn1 = new JRadioButton("Teach my dog only the basics");btn1.setSelected(false);       
         final JRadioButton btn2 = new JRadioButton("I consider training an ongoing process");btn2.setSelected(false);     
         btn1.setForeground(Color.BLACK);
         btn2.setForeground(Color.BLACK);

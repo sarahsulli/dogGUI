@@ -62,7 +62,7 @@ public class Q8 extends JFrame
 
         final JRadioButton btn1 = new JRadioButton("Very");btn1.setSelected(false);       
         final JRadioButton btn2 = new JRadioButton("Somewhat");btn2.setSelected(false);  
-        final JRadioButton btn3 = new JRadioButton("Not");btn1.setSelected(false);
+        final JRadioButton btn3 = new JRadioButton("Not");btn3.setSelected(false);
         btn1.setForeground(Color.BLACK);
         btn2.setForeground(Color.BLACK);
         btn3.setForeground(Color.BLACK);

@@ -62,7 +62,7 @@ public class Q9 extends JFrame
 
         final JRadioButton btn1 = new JRadioButton("I don't mind at all");btn1.setSelected(false);       
         final JRadioButton btn2 = new JRadioButton("A little drool is okay");btn2.setSelected(false);  
-        final JRadioButton btn3 = new JRadioButton("I want a dog that does NOT drool");btn1.setSelected(false);
+        final JRadioButton btn3 = new JRadioButton("I prefer a dog that doesn't drool");btn3.setSelected(false);
         btn1.setForeground(Color.BLACK);
         btn2.setForeground(Color.BLACK);
         btn3.setForeground(Color.BLACK);
@@ -125,15 +125,12 @@ public class Q9 extends JFrame
                     Object source = click.getSource();
                     Scores scr = new Scores();
                     //adding points (making sure click on button and pressed next!!)
-                    if(source == btn1){
+                    if(source == btn1){                        
                         scr.addPointD2();
                         scr.addPointD5();
                         scr.addPointD6();
                         scr.addPointD7();
-                        scr.addPointD14();
-
-
-
+                        scr.addPointD14();                        
                         Q10 frame = new Q10(); 
                         frame.setVisible(true);
                     }
@@ -152,13 +149,19 @@ public class Q9 extends JFrame
                     if(source == btn2){                        
                         scr.addPointD0();
                         scr.addPointD1();
+                        scr.addPointD2();
                         scr.addPointD3();
                         scr.addPointD4();
+                        scr.addPointD5();
+                        scr.addPointD6();
+                        scr.addPointD7();
                         scr.addPointD8();
-                      
-          
-
-                        
+                        scr.addPointD9();
+                        scr.addPointD10();
+                        scr.addPointD11();
+                        scr.addPointD12();
+                        scr.addPointD13();
+                        scr.addPointD14();
                         Q10 frame = new Q10(); 
                         frame.setVisible(true);
                     }
@@ -166,21 +169,33 @@ public class Q9 extends JFrame
                 }
 
             });
-                   btn3.addActionListener(new ActionListener(){
+        btn3.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent click)
                 {
                     Object source = click.getSource();
                     Scores scr = new Scores();
                     //adding points (making sure click on button and pressed next!!)
                     if(source == btn3){
+                        scr.addPointD9(); //+4
+                        scr.addPointD10();
+                        scr.addPointD11();
+                        scr.addPointD12();
+                        scr.addPointD13();
                         scr.addPointD9();
                         scr.addPointD10();
                         scr.addPointD11();
                         scr.addPointD12();
                         scr.addPointD13();
-
-
-
+                        scr.addPointD9();
+                        scr.addPointD10();
+                        scr.addPointD11();
+                        scr.addPointD12();
+                        scr.addPointD13();
+                        scr.addPointD9();
+                        scr.addPointD10();
+                        scr.addPointD11();
+                        scr.addPointD12();
+                        scr.addPointD13();
 
                         Q10 frame = new Q10(); 
                         frame.setVisible(true);
@@ -189,7 +204,7 @@ public class Q9 extends JFrame
                 }
 
             });
-   
+
     } 
 
 }
