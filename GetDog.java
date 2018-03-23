@@ -50,6 +50,7 @@ public class GetDog extends JFrame{
 
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
+                contentPane.setBackground(new Color(233,193,255));
         contentPane.setSize(new Dimension(600,200));
         contentPane.setBounds(80, 95, 78, 25);
 

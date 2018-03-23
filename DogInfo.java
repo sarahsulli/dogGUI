@@ -37,14 +37,15 @@ public class DogInfo extends JFrame
         setContentPane(contentPane);
         contentPane.setSize(new Dimension(600,200));
         contentPane.setBounds(80, 95, 78, 25);
+        contentPane.setBackground(new Color(233,193,255));
 
         Scores sCopy = new Scores();        
         Doggos dCopy = new Doggos();
         String theInfo = dCopy.dInfo();
         JLabel dogInfoText = new JLabel(theInfo);
 
-        JLabel other = new JLabel("<html><b> Other good dogs for you include: </b><br>" + dCopy.find2Dog() + " and "
-                +dCopy.find3Dog() +"<html>");
+        JLabel other = new JLabel("<html><b> Other good dogs for you include: </b><br>" 
+                + dCopy.find2Dog() + " and " +dCopy.find3Dog() +"<html>");
 
         dogInfoText.setForeground(Color.BLACK);
         other.setForeground(Color.BLACK);
@@ -57,7 +58,7 @@ public class DogInfo extends JFrame
         //create object of JButton and set label on it        
         final JButton btnNewFrame = new JButton("Retake Quiz!");
         btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
-        btnNewFrame.setBounds(300, 600, 425, 425);
+        btnNewFrame.setBounds(400, 700, 525, 525);
         contentPane.add(other);
         contentPane.add(btnNewFrame);
         btnNewFrame.addActionListener(new ActionListener()

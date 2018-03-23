@@ -1,7 +1,8 @@
 #BlueJ class context
-comment0.params=
-comment0.target=DogInfo()
-comment0.text=\r\n\ Create\ the\ frame.\r\n
-comment1.params=click
-comment1.target=void\ actionPerformed(java.awt.event.ActionEvent)
-numComments=2
+comment0.target=DogInfo
+comment1.params=
+comment1.target=DogInfo()
+comment1.text=\n\ Create\ the\ frame.\n
+comment2.params=click
+comment2.target=void\ actionPerformed(java.awt.event.ActionEvent)
+numComments=3

@@ -45,46 +45,45 @@ public class Menu extends JFrame
         //set default close operation
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         //set bounds of the frame
-        setBounds(100, 100, 850, 500);                           
+        setBounds(100, 100, 850, 600);                           
         //create object of JPanel
         contentPane = new JPanel(new GridLayout(10,0));
 
         //set border
-        contentPane.setBorder(new EmptyBorder(5, 5, 50, 50));
+        contentPane.setBorder(new EmptyBorder(20, 20, 50, 50));
         //set ContentPane
         setContentPane(contentPane);
         //contentPane.setLayout(new FlowLayout());
-        contentPane.setSize(new Dimension(600,200));
+        contentPane.setSize(new Dimension(850,600));
         contentPane.setBackground(new Color(233,193,255));
-        contentPane.setBounds(80, 95, 78, 25);
+        contentPane.setBounds(80, 85, 78, 25);
 
         //set Label in the frame
         JLabel intro = new JLabel("<html><b>This application helps determine what breed of dog you should get.</b>"
-        +"<br> Press 'Next' to start! </b></html>");
+                +"<br> Press 'Next' to start! </b></html>");
 
         //set foreground color to the label
         intro.setForeground(Color.WHITE);
         //set font of that label
         intro.setFont(new Font("Times New Roman", Font.BOLD, 24));
         //set bound of the label
-        intro.setBounds(327, 195, 178, 39);
+        intro.setBounds(7, 0, 8, 3);
         //add label to the contentPane 
         contentPane.add(intro);
 
-
         //create object of JButton and set label on it
-        JButton btnNewFrame = new JButton("Next");
-        JButton btnInfoFrame = new JButton("What's this??");   
-        JButton btnQuitFrame = new JButton("Quit");
+        JButton btnNewFrame = new JButton("Next");btnNewFrame.setSelected(false); 
+        JButton btnInfoFrame = new JButton("What's this??");btnInfoFrame.setSelected(false); 
+        JButton btnQuitFrame = new JButton("Quit");btnQuitFrame.setSelected(false); 
         btnQuitFrame.setForeground(Color.RED);
         //set font of the Button
         btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 20));
         btnInfoFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 20));
         btnQuitFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 20));
         //set bounds of the Button
-        btnNewFrame.setBounds(380, 295, 178, 125);
-        btnInfoFrame.setBounds(380, 295, 178, 125);     
-        btnQuitFrame.setBounds(380, 295, 178, 125);        
+        btnNewFrame.setBounds(280, 195, 78, 25);
+        btnInfoFrame.setBounds(480, 395, 278, 225);     
+        btnQuitFrame.setBounds(480, 395, 278, 225);        
         //add Button into contentPane
         contentPane.add(btnNewFrame);
         contentPane.add(btnInfoFrame);

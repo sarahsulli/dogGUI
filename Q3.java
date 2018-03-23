@@ -42,7 +42,7 @@ public class Q3 extends JFrame
 
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
-        contentPane.setLayout(new FlowLayout());
+        contentPane.setBackground(new Color(233,193,255));
         contentPane.setSize(new Dimension(600,200));
         contentPane.setBounds(100, 95, 78, 25);
 
@@ -77,8 +77,8 @@ public class Q3 extends JFrame
         contentPane.add(btn3);
 
         //create object of JButton and set label on it        
-        final JButton btnNewFrame = new JButton("Next");
-        final JButton btnQuitFrame = new JButton("Quit");
+        final JButton btnNewFrame = new JButton("Next");btnNewFrame.setSelected(false); 
+        final JButton btnQuitFrame = new JButton("Quit");btnQuitFrame.setSelected(false); 
         btnQuitFrame.setForeground(Color.RED);
         btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
         btnQuitFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));

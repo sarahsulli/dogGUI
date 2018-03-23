@@ -43,7 +43,7 @@ public class Q1 extends JFrame
 
         //set border
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-        //set ContentPane
+        contentPane.setBackground(new Color(233,193,255));
         setContentPane(contentPane);
         contentPane.setSize(new Dimension(600,200));
         contentPane.setBounds(80, 95, 78, 25);

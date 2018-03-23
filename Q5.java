@@ -41,9 +41,8 @@ public class Q5 extends JFrame
 
         //set border
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-        //set ContentPane
+        contentPane.setBackground(new Color(233,193,255));
         setContentPane(contentPane);
-        /**contentPane.setLayout(new FlowLayout());*/
         contentPane.setSize(new Dimension(600,200));
         contentPane.setBounds(80, 95, 78, 25);
 
@@ -60,10 +59,10 @@ public class Q5 extends JFrame
 
         //set button group
         ButtonGroup group = new ButtonGroup();
-        final JButton btn1 = new JButton("Children");btn1.setSelected(false); 
-        final JButton btn2 = new JButton("Seniors");btn2.setSelected(false);    
-        final JButton btn3 = new JButton("Children and Seniors");btn2.setSelected(false); 
-        final JButton btn4 = new JButton("None");btn2.setSelected(false);     
+        final JRadioButton btn1 = new JRadioButton("Children");btn1.setSelected(false); 
+        final JRadioButton btn2 = new JRadioButton("Seniors");btn2.setSelected(false);    
+        final JRadioButton btn3 = new JRadioButton("Children and Seniors");btn2.setSelected(false); 
+        final JRadioButton btn4 = new JRadioButton("None");btn2.setSelected(false);     
         btn1.setForeground(Color.BLACK);
         btn2.setForeground(Color.BLACK);
         btn3.setForeground(Color.BLACK);    
@@ -127,7 +126,7 @@ public class Q5 extends JFrame
         btn1.addActionListener(new ActionListener(){
 
                 public void actionPerformed(ActionEvent event) {
-                    JButton source = (JButton) event.getSource();
+                    JRadioButton source = (JRadioButton) event.getSource();
                     Scores scr = new Scores();
                     if (source==btn1) {
                         scr.addPointD0();
@@ -144,7 +143,7 @@ public class Q5 extends JFrame
         //seinors
         btn2.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent event) {
-                    JButton source = (JButton) event.getSource();
+                    JRadioButton source = (JRadioButton) event.getSource();
                     Scores scr = new Scores();
                     if (source==btn2) {  
                         scr.addPointD3();
@@ -164,7 +163,7 @@ public class Q5 extends JFrame
         //both
         btn3.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent event) {
-                    JButton source = (JButton) event.getSource();
+                    JRadioButton source = (JRadioButton) event.getSource();
                     Scores scr = new Scores();
                     if (source==btn3) {  
                         scr.addPointD0();
@@ -188,7 +187,7 @@ public class Q5 extends JFrame
         //both
         btn4.addActionListener(new ActionListener(){
                 public void actionPerformed(ActionEvent event) {
-                    JButton source = (JButton) event.getSource();
+                    JRadioButton source = (JRadioButton) event.getSource();
                     Scores scr = new Scores();
                     if (source==btn4) {  
 
