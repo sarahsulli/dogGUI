@@ -18,26 +18,10 @@ import javax.swing.plaf.metal.*;
 import javax.swing.*;
 
 public class GetDog extends JFrame{
-    private Scores Scores = new Scores();
-    private Doggos Doggos;
-
-    private int highDogIndex;
-
+    //private Scores Scores = new Scores();
+    //private Doggos Doggos;
     private JPanel contentPane;
-    private JFrame theFrame;
-
-    //this method finds the Index of the highest score
-    /**public String findDog(){
-    Doggos = new Doggos();
-    Doggos.getList = (ArrayList<String>)theDogs.clone();
-
-    ArrayList<String> dogList2 = Doggos.getList();
-    int index = Scores.highestScore();
-    String result;
-    result = Doggos.getList().get(index); 
-    return result;
-    } */
-
+   
     public GetDog() {
         //set frame title
         setTitle("Your Spirit Dog");
@@ -49,7 +33,6 @@ public class GetDog extends JFrame{
         setContentPane(contentPane);
         contentPane.setBackground(new Color(233,193,255));
         contentPane.setSize(new Dimension(600,200));
-        contentPane.setBounds(90, 105, 108, 35);
 
         Doggos dCopy = new Doggos();
         Scores sCopy = new Scores();

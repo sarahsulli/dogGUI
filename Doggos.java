@@ -1,10 +1,3 @@
-
-/**
- * Write a description of class Numbers here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 import java.util.ArrayList;
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -46,7 +39,6 @@ public class Doggos {
         private String pic;
     private ArrayList<String> dogList = new ArrayList<String>();;     
     public Doggos() {
-        //dogList = new ArrayList<String>();
         dogList.add(golden);
         dogList.add(lab);
         dogList.add(germanSheperd);    

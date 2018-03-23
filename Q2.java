@@ -22,7 +22,6 @@ public class Q2 extends JFrame
 {
     private JPanel contentPane;
     private Scores Scores;
-    private JFrame theFrame;
 
     /**
      * Create the frame.
@@ -38,16 +37,13 @@ public class Q2 extends JFrame
         setContentPane(contentPane);
         contentPane.setBackground(new Color(233,193,255));
         contentPane.setSize(new Dimension(600,200));
-        contentPane.setBounds(80, 95, 78, 25);
 
         JLabel intro = new JLabel("What best describes what kind of dog you want?");
         intro.setForeground(Color.BLACK);
-        intro.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18));
-        intro.setBounds(327, 195, 78, 39);
+        intro.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 22));
         contentPane.add(intro);
 
         ButtonGroup group = new ButtonGroup();
-
         final JRadioButton btn1 = new JRadioButton("A cuddle friend who doesn't need tons of exercise");btn1.setSelected(false);       
         final JRadioButton btn2 = new JRadioButton("Sporty and high energy");btn2.setSelected(false);
         final JRadioButton btn3 = new JRadioButton("Family frendly");btn3.setSelected(false);    
@@ -56,10 +52,10 @@ public class Q2 extends JFrame
         btn2.setForeground(Color.BLACK);
         btn3.setForeground(Color.BLACK);
         btn4.setForeground(Color.BLACK);
-        btn1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
-        btn2.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
-        btn3.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
-        btn4.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
+        btn1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 22)); 
+        btn2.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 22)); 
+        btn3.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 22)); 
+        btn4.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 22)); 
         group.add(btn1);
         group.add(btn2); 
         group.add(btn3);       
@@ -72,8 +68,8 @@ public class Q2 extends JFrame
         final JButton btnNewFrame = new JButton("Next");
         final JButton btnQuitFrame = new JButton("Quit");
         btnQuitFrame.setForeground(Color.RED);
-        btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));        
-        btnQuitFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
+        btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 20));        
+        btnQuitFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 20));
         contentPane.add(btnNewFrame);
         contentPane.add(btnQuitFrame);
 

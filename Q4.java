@@ -22,44 +22,28 @@ public class Q4 extends JFrame
 {
     private JPanel contentPane;
     private Scores Scores;
-    private JFrame theFrame;
 
     /**
      * Create the frame.
      */
     public Q4()//constructor 
     {
-        //set frame title
         setTitle("Question 4");
-        //set default close operation
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        //set bounds of the frame
         setBounds(100, 100, 850, 500);                           
-        //create object of JPanel
         contentPane = new JPanel(new GridLayout(10,0));
-
-        //set border
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-        //set ContentPane
         setContentPane(contentPane);
         contentPane.setBackground(new Color(233,193,255));
         contentPane.setSize(new Dimension(600,200));
-        contentPane.setBounds(80, 95, 78, 25);
 
-        //set Label in the frame
         JLabel intro = new JLabel("Do you mind if the dog sheds?");
-        //set foreground color to the label
         intro.setForeground(Color.BLACK);
-        //set font of that label
         intro.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18));
-        //set bound of the label
         intro.setBounds(327, 195, 78, 39);
-        //add label to the contentPane
         contentPane.add(intro);
 
-        //set button group
         ButtonGroup group = new ButtonGroup();
-
         final JRadioButton btn1 = new JRadioButton("Yes");btn1.setSelected(false);       
         final JRadioButton btn2 = new JRadioButton("No");btn2.setSelected(false);     
         btn1.setForeground(Color.BLACK);
@@ -71,7 +55,6 @@ public class Q4 extends JFrame
         contentPane.add(btn1);
         contentPane.add(btn2);
 
-        //create object of JButton and set label on it        
         final JButton btnNewFrame = new JButton("Next");
         final JButton btnQuitFrame = new JButton("Quit");
         btnQuitFrame.setForeground(Color.RED);
@@ -85,15 +68,11 @@ public class Q4 extends JFrame
 
                 public void actionPerformed(ActionEvent click)
                 {
-                    //get source of click
                     Object source = click.getSource();
-                    //next 
                     if(source == btnNewFrame){
                         Q5 frame = new Q5(); 
                         frame.setVisible(true);
                     }    
-
-                    //set default close operation
                     dispose();
                 }
 
@@ -119,7 +98,6 @@ public class Q4 extends JFrame
                 {
                     Object source = click.getSource();
                     Scores scr = new Scores();
-                    //adding points (making sure click on button and pressed next!!)
                     if(source == btn1){
                         scr.addPointD3();
                         scr.addPointD9();
@@ -150,7 +128,6 @@ public class Q4 extends JFrame
                 {
                     Object source = click.getSource();
                     Scores scr = new Scores();
-                    //adding points (making sure click on button and pressed next!!)
                     if(source == btn2){                        
                         scr.addPointD0();
                         scr.addPointD1();

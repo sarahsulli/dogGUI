@@ -1,10 +1,9 @@
 import java.awt.EventQueue;
-import java.awt.Dimension;
 /**
- * Write a description of class Survey here.
+ * Write a description of class TakeQuiz here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (Sarah Sullivan)
+ * @version (3/23/2018)
  */
 public class TakeQuiz
 {
