@@ -23,16 +23,6 @@ public class Menu extends JFrame
     //declare variable
     private JPanel contentPane;
     private JFrame theFrame;
-    protected JButton b1;
-    protected static ImageIcon createImageIcon(String path) {
-        java.net.URL imgURL = Menu.class.getResource(path);
-        if (imgURL != null) {
-            return new ImageIcon(imgURL);
-        } else {
-            System.err.println("Couldn't find file: " + path);
-            return null;
-        }
-    }
 
     /**
      * Create the frame.
@@ -47,16 +37,23 @@ public class Menu extends JFrame
         //set bounds of the frame
         setBounds(100, 100, 850, 600);                           
         //create object of JPanel
-        contentPane = new JPanel(new GridLayout(10,0));
+        contentPane = new JPanel();
+        //contentPane = new JPanel(new GridLayout(10,0));
+
+        ImageIcon icon = new ImageIcon("dog.jpg");
+        JLabel label = new JLabel(icon);
+        label.setSize(new Dimension(1000,1000));
+        ImageIcon imageIcon = new ImageIcon(new ImageIcon("dog.jpg").getImage().getScaledInstance(270, 170, Image.SCALE_DEFAULT));
+        label.setIcon(imageIcon);
+        
 
         //set border
         contentPane.setBorder(new EmptyBorder(20, 20, 50, 50));
         //set ContentPane
         setContentPane(contentPane);
-        //contentPane.setLayout(new FlowLayout());
-        contentPane.setSize(new Dimension(850,600));
+        contentPane.setSize(new Dimension(1000,1000));
         contentPane.setBackground(new Color(233,193,255));
-        contentPane.setBounds(80, 85, 78, 25);
+        contentPane.setBounds(100, 100, 100, 100);
 
         //set Label in the frame
         JLabel intro = new JLabel("<html><b>This application helps determine what breed of dog you should get.</b>"
@@ -88,6 +85,7 @@ public class Menu extends JFrame
         contentPane.add(btnNewFrame);
         contentPane.add(btnInfoFrame);
         contentPane.add(btnQuitFrame);
+        contentPane.add(label);
         //add actionListener        
         btnNewFrame.addActionListener(new ActionListener()
             {

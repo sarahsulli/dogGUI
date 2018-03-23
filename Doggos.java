@@ -6,13 +6,31 @@
  * @version (a version number or a date)
  */
 import java.util.ArrayList;
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import java.awt.Dimension;
+import javax.swing.border.EmptyBorder;
+import java.awt.FlowLayout;
+import javax.swing.ImageIcon;
+import javax.swing.AbstractButton;
+import java.awt.event.*;
+import java.awt.*;
+import javax.swing.plaf.metal.*;
+import javax.swing.*;
 public class Doggos {
     private String golden = "Golden Retriever";
     private String lab = "Lab";
     private String germanSheperd = "German Shepherd";
     private String poodle = "Poodle";
     private String frenchBulldog = "French Bulldog";
-    private String huskie = "Huskie";
+    private String huskie = "Husky";
     private String greatDane = "Great Dane";
     private String borderCollie = "Boarder Collie";
     private String corgi = "Corgi";   
@@ -23,7 +41,9 @@ public class Doggos {
     private String shibaInu = "Shiba Inu";
     private String newfoundland = "Newfoundland";
 
+    private JPanel contentPane;
     private String info;
+        private String pic;
     private ArrayList<String> dogList = new ArrayList<String>();;     
     public Doggos() {
         //dogList = new ArrayList<String>();
@@ -55,7 +75,7 @@ public class Doggos {
         result = dogList.get(index); 
         return result;
     }
-    
+
     public String find2Dog(){
         Scores copy = new Scores();
         int index = copy.secondHighScore(); 
@@ -71,7 +91,6 @@ public class Doggos {
         result = dogList.get(index); 
         return result;
     }
-    
 
     public String dInfo(){
         Scores sCopy = new Scores();
@@ -191,4 +210,87 @@ public class Doggos {
 
         return info;
     }
+
+    public String dogPic(){
+        
+        Scores sCopy = new Scores();
+        int dogIndexInfo = sCopy.getHighestScore();
+        if(dogIndexInfo == 0 )
+        {
+            pic = "golden.gif";
+            return pic;
+        }
+        if(dogIndexInfo == 1 )
+        {
+            pic = "lab.gif";
+            return pic;
+        }
+        if(dogIndexInfo == 2 )
+        {
+            pic = "gs.gif";
+            return pic;
+        }
+        if(dogIndexInfo == 3 )
+        {
+            pic = "poodle.gif";
+            return pic;
+        }
+        if(dogIndexInfo == 4 )
+        {
+            pic = "fbd.gif";
+            return pic;
+        }
+        if(dogIndexInfo == 5 )
+        {
+            pic = "husky.gif";
+            return pic;
+        }
+        if(dogIndexInfo == 6 )
+        {
+            pic = "gd.gif";
+            return pic;
+        }
+        if(dogIndexInfo == 7 )
+        {
+            pic = "bc.gif";
+            return pic;
+        }
+        if(dogIndexInfo == 8 )
+        {
+            pic = "corgi.gif";
+            return pic;            
+        }
+        if(dogIndexInfo == 9 )
+        {
+            pic = "maltese.gif";
+            return pic;
+        }
+        if(dogIndexInfo == 10 )
+        {
+            pic = "pom.gif";
+            return pic;
+        }
+        if(dogIndexInfo == 11 )
+        {
+            pic = "chi.gif";
+            return pic;
+        }
+        if(dogIndexInfo == 12 )
+        {
+            pic = "hav.gif";
+            return pic;
+        }
+        if(dogIndexInfo == 13 )
+        {
+            pic = "shiba.gif";
+            return pic;
+        }
+        if(dogIndexInfo == 14 )
+        {
+            pic = "newf.gif";
+            return pic;
+        }
+        return pic;
+    }
+
 }

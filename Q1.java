@@ -73,7 +73,7 @@ public class Q1 extends JFrame
         btn3.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
         group.add(btn1);
         group.add(btn2); 
-        group.add(btn3);          
+        group.add(btn3);       
         contentPane.add(btn1);
         contentPane.add(btn2);
         contentPane.add(btn3);
