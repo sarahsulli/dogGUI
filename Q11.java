@@ -40,7 +40,7 @@ public class Q11 extends JFrame
 
         JLabel intro = new JLabel("Do you want a common dog or a unique breed?");
         intro.setForeground(Color.BLACK);
-        intro.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18));
+        intro.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 22));
         contentPane.add(intro);
 
         ButtonGroup group = new ButtonGroup();
@@ -48,8 +48,8 @@ public class Q11 extends JFrame
         final JRadioButton btn2 = new JRadioButton("Unique!");btn2.setSelected(false);  
         btn1.setForeground(Color.BLACK);
         btn2.setForeground(Color.BLACK);
-        btn1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
-        btn2.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
+        btn1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 22)); 
+        btn2.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 22)); 
         group.add(btn1);
         group.add(btn2);           
         contentPane.add(btn1);
@@ -58,8 +58,8 @@ public class Q11 extends JFrame
         final JButton btnNewFrame = new JButton("Next");
         final JButton btnQuitFrame = new JButton("Quit");
         btnQuitFrame.setForeground(Color.RED);
-        btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
-        btnQuitFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
+        btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 20));
+        btnQuitFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 20));
         contentPane.add(btnNewFrame);
         contentPane.add(btnQuitFrame);        
 
@@ -114,7 +114,7 @@ public class Q11 extends JFrame
                     Object source = click.getSource();
                     Scores scr = new Scores();
                     if(source == btn2){ 
-                        scr.addPointD6();//+6 pt
+                        scr.addPointD6();//+4 pt
                         scr.addPointD12();
                         scr.addPointD13();
                         scr.addPointD14();
@@ -125,15 +125,7 @@ public class Q11 extends JFrame
                         scr.addPointD6();
                         scr.addPointD12();
                         scr.addPointD13();
-                        scr.addPointD14();
-                        scr.addPointD6();
-                        scr.addPointD12();
-                        scr.addPointD13();
-                        scr.addPointD14();
-                        scr.addPointD6();
-                        scr.addPointD12();
-                        scr.addPointD13();
-                        scr.addPointD14();
+                        scr.addPointD14();                      
                         scr.addPointD6();
                         scr.addPointD12();
                         scr.addPointD13();

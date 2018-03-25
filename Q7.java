@@ -40,7 +40,7 @@ public class Q7 extends JFrame
 
         JLabel intro = new JLabel("How much training do you plan on doing?");
         intro.setForeground(Color.BLACK);
-        intro.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18));;
+        intro.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 22));;
         contentPane.add(intro);
 
         ButtonGroup group = new ButtonGroup();
@@ -48,8 +48,8 @@ public class Q7 extends JFrame
         final JRadioButton btn2 = new JRadioButton("I consider training an ongoing process");btn2.setSelected(false);     
         btn1.setForeground(Color.BLACK);
         btn2.setForeground(Color.BLACK);
-        btn1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
-        btn2.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
+        btn1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 22)); 
+        btn2.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 22)); 
         group.add(btn1);
         group.add(btn2);                 
         contentPane.add(btn1);
@@ -58,8 +58,8 @@ public class Q7 extends JFrame
         final JButton btnNewFrame = new JButton("Next");
         final JButton btnQuitFrame = new JButton("Quit");
         btnQuitFrame.setForeground(Color.RED);
-        btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
-        btnQuitFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
+        btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 20));
+        btnQuitFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD,20));
         contentPane.add(btnNewFrame);
         contentPane.add(btnQuitFrame);        
 
@@ -121,18 +121,19 @@ public class Q7 extends JFrame
                 }
 
             });
-        //dog can shed
+
         btn2.addActionListener(new ActionListener(){
 
                 public void actionPerformed(ActionEvent click)
                 {
                     Object source = click.getSource();
                     Scores scr = new Scores();
-                    if(source == btn2){                        
+                    if(source == btn2){     
+                        scr.addPointD0();
                         scr.addPointD2();
                         scr.addPointD3();
                         scr.addPointD7();
-                                  
+
                         Q8 frame = new Q8(); 
                         frame.setVisible(true);
                     }
@@ -140,7 +141,7 @@ public class Q7 extends JFrame
                 }
 
             });
-   
+
     } 
 
 }

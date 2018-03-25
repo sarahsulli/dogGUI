@@ -40,7 +40,7 @@ public class Q8 extends JFrame
 
         JLabel intro = new JLabel("How smart do you want your dog to be?");
         intro.setForeground(Color.BLACK);
-        intro.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18));
+        intro.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 22));
         contentPane.add(intro);
 
         ButtonGroup group = new ButtonGroup();
@@ -50,9 +50,9 @@ public class Q8 extends JFrame
         btn1.setForeground(Color.BLACK);
         btn2.setForeground(Color.BLACK);
         btn3.setForeground(Color.BLACK);
-        btn1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
-        btn2.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
-        btn3.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18)); 
+        btn1.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 22)); 
+        btn2.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 22)); 
+        btn3.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 22)); 
         group.add(btn1);
         group.add(btn2);    
         group.add(btn3); 
@@ -63,8 +63,8 @@ public class Q8 extends JFrame
         final JButton btnNewFrame = new JButton("Next");
         final JButton btnQuitFrame = new JButton("Quit");
         btnQuitFrame.setForeground(Color.RED);
-        btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
-        btnQuitFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
+        btnNewFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 20));
+        btnQuitFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 20));
         contentPane.add(btnNewFrame);
         contentPane.add(btnQuitFrame);        
 

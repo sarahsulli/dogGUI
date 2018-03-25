@@ -53,19 +53,19 @@ public class GetDog extends JFrame{
 
         intro.setForeground(Color.BLACK);
         intro.setBounds(327, 195, 78, 39);
-        intro.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18));
+        intro.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 22));
 
         dogInfoText.setForeground(Color.BLACK);
         dogInfoText.setBounds(327, 195, 78, 39);
-        dogInfoText.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18));
+        dogInfoText.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 22));
 
         other.setForeground(Color.BLACK);
         other.setBounds(327, 195, 78, 39);
-        other.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 18));
+        other.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 22));
         final JButton btnNextFrame = new JButton("Retake Quiz"); 
         final JButton btnQuitFrame = new JButton("Quit"); 
-        btnNextFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
-        btnQuitFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 12));
+        btnNextFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 20));
+        btnQuitFrame.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 20));
         btnQuitFrame.setForeground(Color.RED);       
         contentPane.add(intro);
         contentPane.add(dogInfoText);
