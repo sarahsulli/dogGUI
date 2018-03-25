@@ -25,7 +25,6 @@ import javax.swing.*;
 public class Q1 extends JFrame
 {
     private JPanel contentPane;
-    //private JFrame theFrame;
 
     /**
      * Create the frame.

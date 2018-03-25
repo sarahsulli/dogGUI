@@ -21,7 +21,6 @@ import java.util.ArrayList;
 public class Q7 extends JFrame
 {
     private JPanel contentPane;
-    private Scores Scores;
 
     /**
      * Create the frame.

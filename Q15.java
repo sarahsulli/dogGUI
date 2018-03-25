@@ -21,14 +21,13 @@ import java.util.ArrayList;
 public class Q15 extends JFrame
 {
     private JPanel contentPane;
-    private Scores Scores;
 
     /**
      * Create the frame.
      */
     public Q15()//constructor 
     {
-        setTitle("Question 14");
+        setTitle("Question 15");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setBounds(100, 100, 850, 500);   
 
