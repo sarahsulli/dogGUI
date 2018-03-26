@@ -102,7 +102,6 @@ public class Q3 extends JFrame
                     Object source = click.getSource();
                     Scores scr = new Scores();
                     if(source == btn1){
-                        scr.addPointD3();
                         scr.addPointD4();
                         scr.addPointD9(); 
                         scr.addPointD10();
