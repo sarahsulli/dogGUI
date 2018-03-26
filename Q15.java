@@ -127,7 +127,6 @@ public class Q15 extends JFrame
                         scr.addPointD8(); 
                         scr.addPointD12();  
                         scr.addPointD13();  
-                        scr.addPointD14();   
                         GetDog frame = new GetDog(); 
                         frame.setVisible(true);
                     }

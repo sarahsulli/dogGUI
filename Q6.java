@@ -144,14 +144,11 @@ public class Q6 extends JFrame
                     Object source = click.getSource();
                     Scores scr = new Scores();
                     if(source == btn2){    
-                        scr.addPointD5(); //+4
+                        scr.addPointD5(); //+
                         scr.addPointD14();
                         scr.addPointD5();
                         scr.addPointD14();
                         scr.addPointD5();
-                        scr.addPointD14();
-                        scr.addPointD5();
-                        scr.addPointD14();
 
                         Q7 frame = new Q7(); 
                         frame.setVisible(true);

@@ -129,7 +129,6 @@ public class Q3 extends JFrame
                         scr.addPointD6();
                         scr.addPointD8();                       
                         scr.addPointD13();
-                        scr.addPointD14();
                         
                         scr.addPointD3();
                         scr.addPointD4();

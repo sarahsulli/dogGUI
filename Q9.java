@@ -137,7 +137,6 @@ public class Q9 extends JFrame
                         scr.addPointD11();
                         scr.addPointD12();
                         scr.addPointD13();
-                        scr.addPointD14();
                         Q10 frame = new Q10(); 
                         frame.setVisible(true);
                     }

@@ -113,7 +113,7 @@ public class Q11 extends JFrame
                     Object source = click.getSource();
                     Scores scr = new Scores();
                     if(source == btn2){ 
-                        scr.addPointD6();//+4 pt
+                        scr.addPointD6();//+3/4 pt
                         scr.addPointD12();
                         scr.addPointD13();
                         scr.addPointD14();

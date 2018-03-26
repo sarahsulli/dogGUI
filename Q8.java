@@ -130,6 +130,7 @@ public class Q8 extends JFrame
                         scr.addPointD10();
                         scr.addPointD12();
                         scr.addPointD13();
+                                                scr.addPointD14();
                                  
                         Q9 frame = new Q9(); 
                         frame.setVisible(true);
@@ -147,7 +148,7 @@ public class Q8 extends JFrame
                         scr.addPointD4();
                         scr.addPointD6();
                         scr.addPointD11();
-                        scr.addPointD14();
+
 
                         Q9 frame = new Q9(); 
                         frame.setVisible(true);
