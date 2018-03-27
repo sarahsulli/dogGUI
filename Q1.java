@@ -148,7 +148,6 @@ public class Q1 extends JFrame
                     //adding points (making sure click on button and pressed next!!)
                     if(source == btn2){
                         scr.addPointD8();
-                                                scr.addPointD3();
                         scr.addPointD13();
                         Q2 frame = new Q2(); 
                         frame.setVisible(true);
@@ -167,6 +166,7 @@ public class Q1 extends JFrame
                     if(source == btn3){
                         scr.addPointD0();
                         scr.addPointD1();
+                        scr.addPointD3();
                         scr.addPointD2();
                         scr.addPointD5();
                         scr.addPointD6();
