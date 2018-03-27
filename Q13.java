@@ -128,6 +128,7 @@ public class Q13 extends JFrame
                         scr.addPointD8();
                         scr.addPointD10();
                         scr.addPointD14();
+                        scr.addPointD3();
                         Q14 frame = new Q14(); 
                         frame.setVisible(true);
                     }
@@ -144,7 +145,6 @@ public class Q13 extends JFrame
                     if(source == btn3){
                         scr.addPointD0();
                         scr.addPointD1();
-                        scr.addPointD3();
                         scr.addPointD12();                        
                         Q14 frame = new Q14(); 
                         frame.setVisible(true);

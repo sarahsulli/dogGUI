@@ -128,7 +128,6 @@ public class Q2 extends JFrame
                     if(source == btn2){
                         scr.addPointD0();
                         scr.addPointD2();
-                        scr.addPointD3();
                         scr.addPointD5();
                         scr.addPointD7();
                         scr.addPointD7();//add 2 points for corgie 

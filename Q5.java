@@ -125,9 +125,7 @@ public class Q5 extends JFrame
                     JRadioButton source = (JRadioButton) event.getSource();
                     Scores scr = new Scores();
                     if (source==btn2) {  
-                        scr.addPointD3();
                         scr.addPointD4();  
-                        scr.addPointD3();
                         scr.addPointD8();
                         scr.addPointD9();
                         scr.addPointD10();
@@ -147,9 +145,7 @@ public class Q5 extends JFrame
                     if (source==btn3) {  
                         scr.addPointD0();
                         scr.addPointD1();
-                        scr.addPointD3();
                         scr.addPointD14();
-                        scr.addPointD3();
                         scr.addPointD4();  
                         scr.addPointD3();
                         scr.addPointD8();
